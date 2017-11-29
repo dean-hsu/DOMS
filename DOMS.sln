@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DOMS.Model", "DOMS.Model\DO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DOMS.Repository", "DOMS.Repository\DOMS.Repository.csproj", "{B1E68524-32AA-473F-B66C-DC90C981B0E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DOMS.Service.Extensions", "DOMS.Service.Extensions\DOMS.Service.Extensions.csproj", "{B624EF70-6E38-4F14-B708-CBF3B7696948}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{B1E68524-32AA-473F-B66C-DC90C981B0E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1E68524-32AA-473F-B66C-DC90C981B0E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1E68524-32AA-473F-B66C-DC90C981B0E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B624EF70-6E38-4F14-B708-CBF3B7696948}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B624EF70-6E38-4F14-B708-CBF3B7696948}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B624EF70-6E38-4F14-B708-CBF3B7696948}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B624EF70-6E38-4F14-B708-CBF3B7696948}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

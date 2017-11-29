@@ -12,7 +12,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using DOMS.WebApp.Models;
 using DOMS.WebApp.Models.AccountViewModels;
-using DOMS.WebApp.Services;
+using DOMS.Service.Interfaces;
+using DOMS.Service.Extensions;
 
 namespace DOMS.WebApp.Controllers
 {

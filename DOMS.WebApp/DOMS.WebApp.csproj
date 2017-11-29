@@ -18,4 +18,9 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DOMS.Service.Extensions\DOMS.Service.Extensions.csproj" />
+    <ProjectReference Include="..\DOMS.Service\DOMS.Service.csproj" />
+  </ItemGroup>
+
 </Project>

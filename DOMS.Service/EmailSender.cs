@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using DOMS.Service.Interfaces;
 using System.Threading.Tasks;
 
-namespace DOMS.WebApp.Services
+namespace DOMS.Service
 {
     // This class is used by the application to send email for account confirmation and password reset.
     // For more details see https://go.microsoft.com/fwlink/?LinkID=532713

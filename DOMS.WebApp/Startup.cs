@@ -10,7 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using DOMS.WebApp.Data;
 using DOMS.WebApp.Models;
-using DOMS.WebApp.Services;
+using DOMS.Service.Interfaces;
+using DOMS.Service;
 
 namespace DOMS.WebApp
 {
