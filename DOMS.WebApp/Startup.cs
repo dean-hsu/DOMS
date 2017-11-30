@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using DOMS.Repository.DbContext;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using DOMS.WebApp.Data;
-using DOMS.WebApp.Models;
 using DOMS.Service.Interfaces;
 using DOMS.Service;
+using DOMS.Model.DbModels;
 
 namespace DOMS.WebApp
 {

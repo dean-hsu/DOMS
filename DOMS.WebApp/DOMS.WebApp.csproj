@@ -19,6 +19,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DOMS.Model\DOMS.Model.csproj" />
+    <ProjectReference Include="..\DOMS.Repository\DOMS.Repository.csproj" />
     <ProjectReference Include="..\DOMS.Service.Extensions\DOMS.Service.Extensions.csproj" />
     <ProjectReference Include="..\DOMS.Service\DOMS.Service.csproj" />
   </ItemGroup>

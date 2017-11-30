@@ -1,4 +1,5 @@
-﻿@using DOMS.WebApp.Views.Manage
+﻿@using DOMS.Model.DbModels
+@using Microsoft.AspNetCore.Identity
 @inject SignInManager<ApplicationUser> SignInManager
 @{
     var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();

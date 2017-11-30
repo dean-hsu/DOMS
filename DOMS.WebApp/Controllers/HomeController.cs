@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
+using DOMS.Model.ViewModels;
 using Microsoft.AspNetCore.Mvc;
-using DOMS.WebApp.Models;
 
 namespace DOMS.WebApp.Controllers
 {

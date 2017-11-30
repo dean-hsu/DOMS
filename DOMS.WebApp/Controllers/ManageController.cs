@@ -1,17 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
+using DOMS.Model.DbModels;
+using DOMS.Model.ViewModels.ManageViewModels;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using DOMS.WebApp.Models;
-using DOMS.WebApp.Models.ManageViewModels;
 using DOMS.Service.Interfaces;
 using DOMS.Service.Extensions;
 
