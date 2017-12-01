@@ -1,22 +1,23 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text;
 
 namespace DOMS.Model.DbModels
 {
-    [Table("DOMS_Customer")]
-    public class Customer: BaseModel
+    [Table("DOMS_Courier")]
+    public class Courier
     {
         [Key]
-        public int CustomerId { get; set; }
+        [Required]
+        public int CourierId { get; set; }
         [Required]
         public string Name { get; set; }
         public string Address { get; set; }
         [Phone]
         public string PhoneNumber { get; set; }
-        public string WechatAccount { get; set; }
-        public string WechatName { get; set; }
-        public string AlipayAccount { get; set; }
-        public string IdCard { get; set; }
+        public string Wechat { get; set; }
+        public string QrCode { get; set; }
     }
 }
