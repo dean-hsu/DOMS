@@ -48,7 +48,7 @@ namespace DOMS.Model.DbModels
         public PaymentStatus PaymentStatus { get; set; }
         public PaymentMethod? PaymentMethod { get; set; }
         [Required]
-        public Customer Purchaser { get; set; }
+        public Customer Customer { get; set; }
         public Delivery Delivery{ get; set; }
         public string Memo { get; set; }
     }

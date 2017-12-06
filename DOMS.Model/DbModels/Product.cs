@@ -10,7 +10,7 @@ namespace DOMS.Model.DbModels
         public int ProductId { get; set; }
         [Required]
         public string ProductName { get; set; }
-        public Brand ProductBrand { get; set; }
+        public Brand Brand { get; set; }
         public string Description { get; set; }
         [Required]
         public decimal CurrentCostAud { get; set; }

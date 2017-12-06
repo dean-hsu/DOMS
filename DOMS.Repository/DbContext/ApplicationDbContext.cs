@@ -20,5 +20,13 @@ namespace DOMS.Repository.DbContext
         }
 
         public DbSet<Customer> Customers { get; set; }
+        public DbSet<Brand> Brands { get; set; }
+        public DbSet<Catalogue> Catalogues { get; set; }
+        public DbSet<Country> Countries { get; set; }
+        public DbSet<Courier> Couriers { get; set; }
+        public DbSet<Delivery> Deliveries { get; set; }
+        public DbSet<Family> Families { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<Product> Products { get; set; }
     }
 }
