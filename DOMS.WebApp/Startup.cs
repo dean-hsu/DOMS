@@ -1,4 +1,6 @@
-﻿using DOMS.Repository.DbContext;
+﻿using DOMS.Interface.Repository;
+using DOMS.Interface.Service;
+using DOMS.Repository.DbContext;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -8,6 +10,11 @@ using Microsoft.Extensions.DependencyInjection;
 using DOMS.Service.Interfaces;
 using DOMS.Service;
 using DOMS.Model.DbModels;
+using DOMS.Repository;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using Serilog.Core;
+using ILogger = Serilog.ILogger;
 
 namespace DOMS.WebApp
 {
@@ -33,11 +40,13 @@ namespace DOMS.WebApp
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
 
+            services.AddDomsRepositories();
+            services.AddDomsServices();
             services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
@@ -60,6 +69,8 @@ namespace DOMS.WebApp
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            loggerFactory.AddFile("Logs/DOMS-{Date}.txt");
         }
     }
 }

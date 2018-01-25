@@ -10,6 +10,8 @@
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.0" PrivateAssets="All" />
+    <PackageReference Include="Serilog" Version="2.6.0" />
+    <PackageReference Include="Serilog.Extensions.Logging.File" Version="1.1.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,6 +25,10 @@
     <ProjectReference Include="..\DOMS.Repository\DOMS.Repository.csproj" />
     <ProjectReference Include="..\DOMS.Service.Extensions\DOMS.Service.Extensions.csproj" />
     <ProjectReference Include="..\DOMS.Service\DOMS.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="..\..\..\..\Dean%2527s\Practices\DOMS\DOMS.WebApp\wwwroot\css\patterns\" />
   </ItemGroup>
 
 </Project>

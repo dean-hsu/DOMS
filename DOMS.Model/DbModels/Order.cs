@@ -34,7 +34,7 @@ namespace DOMS.Model.DbModels
     public class Order : BaseModel
     {
         [Key]
-        public int OrderId { get; set; }
+        public string OrderNo { get; set; }
         [Required]
         public Product Product { get; set; }
         [Required]
@@ -51,5 +51,7 @@ namespace DOMS.Model.DbModels
         public Customer Customer { get; set; }
         public Delivery Delivery{ get; set; }
         public string Memo { get; set; }
+        [Required]
+        public ApplicationUser User { get; set; }
     }
 }

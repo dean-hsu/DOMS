@@ -8,10 +8,18 @@ namespace DOMS.Model.DbModels
     {
         [Key]
         public int BrandId { get; set; }
+
         [Required]
+        [Display(Name = "Name")]
         public string BrandName { get; set; }
+
+        [Display(Name = "Logo")]
         public string BrandLogo { get; set; }
+
+        [Display(Name = "Country")]
         public Country Country { get; set; }
+
+        [Display(Name = "Description")]
         public string BrandDescription { get; set; }
     }
 }

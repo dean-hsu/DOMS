@@ -1,0 +1,717 @@
+2018-01-16T00:07:17.8682525+11:00 0HLAS33JP6S24:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44384/   (ca22a1cb)
+2018-01-16T00:07:18.2591348+11:00 0HLAS33JP6S24:00000001 [INF] Executing action method "DOMS.WebApp.Controllers.HomeController.Index (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-16T00:07:18.2847329+11:00 0HLAS33JP6S24:00000001 [INF] Executing RedirectResult, redirecting to "/Account/Login". (d98d540e)
+2018-01-16T00:07:18.2985945+11:00 0HLAS33JP6S24:00000001 [INF] Executed action "DOMS.WebApp.Controllers.HomeController.Index (DOMS.WebApp)" in 56.9573ms (afa2e885)
+2018-01-16T00:07:18.3293995+11:00 0HLAS33JP6S24:00000001 [INF] Request finished in 526.9533ms 302  (791a596a)
+2018-01-16T00:07:18.3490471+11:00 0HLAS33JP6S24:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44384/Account/Login   (ca22a1cb)
+2018-01-16T00:07:18.7163830+11:00 0HLAS33JP6S24:00000002 [INF] Executing action method "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" with arguments ([""]) - ModelState is Valid (ba7f4ac2)
+2018-01-16T00:07:18.7632576+11:00 0HLAS33JP6S24:00000002 [INF] AuthenticationScheme: "Identity.External" signed out. (d3f50c8d)
+2018-01-16T00:07:23.0581565+11:00 0HLAS33JP6S24:00000002 [INF] Executing ViewResult, running view at path "/Views/Account/Login.cshtml". (9707eebe)
+2018-01-16T00:07:23.4644132+11:00 0HLAS33JP6S24:00000002 [INF] Executed action "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" in 5050.5691ms (afa2e885)
+2018-01-16T00:07:23.5077049+11:00 0HLAS33JP6S24:00000002 [INF] Request finished in 5151.8022ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-16T00:07:25.9907660+11:00 0HLAS33JP6S24:00000003 [INF] Request starting HTTP/1.1 POST http://localhost:44384/Account/Login application/x-www-form-urlencoded 246 (ca22a1cb)
+2018-01-16T00:07:26.1974645+11:00 0HLAS33JP6S24:00000003 [INF] Executing action method "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" with arguments (["DOMS.Model.ViewModels.AccountViewModels.LoginViewModel", ""]) - ModelState is Valid (ba7f4ac2)
+2018-01-16T00:07:27.5996268+11:00 0HLAS33JP6S24:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-16T00:07:28.6455247+11:00 0HLAS33JP6S24:00000003 [INF] Executed DbCommand ("114"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-01-16T00:07:29.2182887+11:00 0HLAS33JP6S24:00000003 [INF] Executed DbCommand ("8"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-01-16T00:07:29.3046141+11:00 0HLAS33JP6S24:00000003 [INF] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-01-16T00:07:29.3367184+11:00 0HLAS33JP6S24:00000003 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2018-01-16T00:07:29.3438323+11:00 0HLAS33JP6S24:00000003 [INF] User logged in. (fdce0db4)
+2018-01-16T00:07:29.3523332+11:00 0HLAS33JP6S24:00000003 [INF] Executing RedirectResult, redirecting to "/Home/Dashboard". (d98d540e)
+2018-01-16T00:07:29.3583974+11:00 0HLAS33JP6S24:00000003 [INF] Executed action "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" in 3322.8045ms (afa2e885)
+2018-01-16T00:07:29.3671690+11:00 0HLAS33JP6S24:00000003 [INF] Request finished in 3403.0424ms 302  (791a596a)
+2018-01-16T00:07:29.3761607+11:00 0HLAS33JP6S24:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44384/Home/Dashboard   (ca22a1cb)
+2018-01-16T00:07:29.4001907+11:00 0HLAS33JP6S24:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-16T00:07:29.4097998+11:00 0HLAS33JP6S24:00000004 [INF] Executing action method "DOMS.WebApp.Controllers.HomeController.Dashboard (DOMS.WebApp)" with arguments ([""]) - ModelState is Valid (ba7f4ac2)
+2018-01-16T00:07:29.6150702+11:00 0HLAS33JP6S24:00000004 [INF] Executing ViewResult, running view at path "/Views/Home/Dashboard.cshtml". (9707eebe)
+2018-01-16T00:07:30.4068723+11:00 0HLAS33JP6S24:00000004 [INF] Executed action "DOMS.WebApp.Controllers.HomeController.Dashboard (DOMS.WebApp)" in 993.4791ms (afa2e885)
+2018-01-16T00:07:30.4158316+11:00 0HLAS33JP6S24:00000004 [INF] Request finished in 1036.9876ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-16T00:07:31.9971680+11:00 0HLAS33JP6S24:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44384/Order   (ca22a1cb)
+2018-01-16T00:07:32.0145124+11:00 0HLAS33JP6S24:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-16T00:07:32.0337527+11:00 0HLAS33JP6S24:00000005 [INF] Executed action "DOMS.WebApp.Controllers.OrderController.Index (DOMS.WebApp)" in 5.7477ms (afa2e885)
+2018-01-16T00:07:32.1557902+11:00 0HLAS33JP6S24:00000005 [ERR] An unhandled exception has occurred while executing the request (cf926119)
+System.InvalidOperationException: Unable to resolve service for type 'DOMS.Interface.Repository.IOrderRepository' while attempting to activate 'DOMS.Service.OrderService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, ISet`1 callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(Type serviceType, Type implementationType, ISet`1 callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, ISet`1 callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(Type serviceType, ISet`1 callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(Type serviceType, ISet`1 callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(Type serviceType, ServiceProvider serviceProvider)
+   at System.Collections.Concurrent.ConcurrentDictionaryExtensions.GetOrAdd[TKey,TValue,TArg](ConcurrentDictionary`2 dictionary, TKey key, Func`3 valueFactory, TArg arg)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-01-16T00:07:32.2559013+11:00 0HLAS33JP6S24:00000005 [INF] Request finished in 270.8743ms 500 text/html; charset=utf-8 (791a596a)
+2018-01-16T00:09:16.7400634+11:00 0HLAS34N67B0E:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44384/   (ca22a1cb)
+2018-01-16T00:09:17.0277790+11:00 0HLAS34N67B0E:00000001 [INF] Executing action method "DOMS.WebApp.Controllers.HomeController.Index (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-16T00:09:17.0464911+11:00 0HLAS34N67B0E:00000001 [INF] Executing RedirectResult, redirecting to "/Account/Login". (d98d540e)
+2018-01-16T00:09:17.0621640+11:00 0HLAS34N67B0E:00000001 [INF] Executed action "DOMS.WebApp.Controllers.HomeController.Index (DOMS.WebApp)" in 39.0388ms (afa2e885)
+2018-01-16T00:09:17.1084862+11:00 0HLAS34N67B0E:00000001 [INF] Request finished in 418.7094ms 302  (791a596a)
+2018-01-16T00:09:17.1490895+11:00 0HLAS34N67B0E:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44384/Account/Login   (ca22a1cb)
+2018-01-16T00:09:17.4627147+11:00 0HLAS34N67B0E:00000002 [INF] Executing action method "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" with arguments ([""]) - ModelState is Valid (ba7f4ac2)
+2018-01-16T00:09:17.5610217+11:00 0HLAS34N67B0E:00000002 [INF] AuthenticationScheme: "Identity.External" signed out. (d3f50c8d)
+2018-01-16T00:09:23.7829174+11:00 0HLAS34N67B0E:00000002 [INF] Executing ViewResult, running view at path "/Views/Account/Login.cshtml". (9707eebe)
+2018-01-16T00:09:24.1645432+11:00 0HLAS34N67B0E:00000002 [INF] Executed action "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" in 6954.7535ms (afa2e885)
+2018-01-16T00:09:24.1901148+11:00 0HLAS34N67B0E:00000002 [INF] Request finished in 7051.428ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-16T00:09:29.0233084+11:00 0HLAS34N67B0E:00000003 [INF] Request starting HTTP/1.1 POST http://localhost:44384/Account/Login application/x-www-form-urlencoded 246 (ca22a1cb)
+2018-01-16T00:09:29.1361967+11:00 0HLAS34N67B0E:00000003 [INF] Executing action method "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" with arguments (["DOMS.Model.ViewModels.AccountViewModels.LoginViewModel", ""]) - ModelState is Valid (ba7f4ac2)
+2018-01-16T00:09:30.1834027+11:00 0HLAS34N67B0E:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-16T00:09:30.9153525+11:00 0HLAS34N67B0E:00000003 [INF] Executed DbCommand ("61"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-01-16T00:09:31.3190753+11:00 0HLAS34N67B0E:00000003 [INF] Executed DbCommand ("8"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-01-16T00:09:31.4258092+11:00 0HLAS34N67B0E:00000003 [INF] Executed DbCommand ("4"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-01-16T00:09:31.4603041+11:00 0HLAS34N67B0E:00000003 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2018-01-16T00:09:31.4673955+11:00 0HLAS34N67B0E:00000003 [INF] User logged in. (fdce0db4)
+2018-01-16T00:09:31.4764152+11:00 0HLAS34N67B0E:00000003 [INF] Executing RedirectResult, redirecting to "/Home/Dashboard". (d98d540e)
+2018-01-16T00:09:31.4830036+11:00 0HLAS34N67B0E:00000003 [INF] Executed action "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" in 2436.3011ms (afa2e885)
+2018-01-16T00:09:31.4934384+11:00 0HLAS34N67B0E:00000003 [INF] Request finished in 2480.3422ms 302  (791a596a)
+2018-01-16T00:09:31.5221294+11:00 0HLAS34N67B0E:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44384/Home/Dashboard   (ca22a1cb)
+2018-01-16T00:09:31.5714814+11:00 0HLAS34N67B0E:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-16T00:09:31.5791017+11:00 0HLAS34N67B0E:00000004 [INF] Executing action method "DOMS.WebApp.Controllers.HomeController.Dashboard (DOMS.WebApp)" with arguments ([""]) - ModelState is Valid (ba7f4ac2)
+2018-01-16T00:09:31.7720888+11:00 0HLAS34N67B0E:00000004 [INF] Executing ViewResult, running view at path "/Views/Home/Dashboard.cshtml". (9707eebe)
+2018-01-16T00:09:32.4819243+11:00 0HLAS34N67B0E:00000004 [INF] Executed action "DOMS.WebApp.Controllers.HomeController.Dashboard (DOMS.WebApp)" in 878.9241ms (afa2e885)
+2018-01-16T00:09:32.4880896+11:00 0HLAS34N67B0E:00000004 [INF] Request finished in 985.4759ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-16T00:09:35.5936862+11:00 0HLAS34N67B0E:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44384/Order   (ca22a1cb)
+2018-01-16T00:09:35.6041470+11:00 0HLAS34N67B0E:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-16T00:09:35.6207350+11:00 0HLAS34N67B0E:00000005 [INF] Executing action method "DOMS.WebApp.Controllers.OrderController.Index (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-16T00:10:03.0291834+11:00 0HLAS34N67B0E:00000005 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-16T00:10:23.5622183+11:00 0HLAS34N67B0E:00000005 [ERR] Failed executing DbCommand ("24"ms) [Parameters=["@__userName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[OrderId], [x].[CreatedTime], [x].[CustomerId], [x].[Deleted], [x].[DeletedTime], [x].[DeliveryId], [x].[Memo], [x].[PaymentMethod], [x].[PaymentStatus], [x].[ProductId], [x].[Quantity], [x].[SellPriceAud], [x].[SellPriceRmb], [x].[Status], [x].[UpdatedTime], [x].[UserId]
+FROM [DOMS_Order] AS [x]
+INNER JOIN [AspNetUsers] AS [x.User] ON [x].[UserId] = [x.User].[Id]
+WHERE [x.User].[UserName] = @__userName_0" (627a98df)
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'UserId'.
+Invalid column name 'UserId'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(Boolean buffer)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+ClientConnectionId:174396e7-b2c6-45da-9b45-19438248367a
+Error Number:207,State:1,Class:16
+2018-01-16T00:14:17.7869878+11:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-16T00:14:52.3364889+11:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-16T00:14:52.4796579+11:00  [INF] Executed DbCommand ("11"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'__EFMigrationsHistory');" (0723d8ff)
+2018-01-16T00:14:52.4844929+11:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'__EFMigrationsHistory');" (0723d8ff)
+2018-01-16T00:14:52.5061645+11:00  [INF] Executed DbCommand ("10"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2018-01-16T00:14:52.5373835+11:00  [INF] Applying migration '"20180115131417_mig3"'. (0e2ac64d)
+2018-01-16T00:14:52.6545850+11:00  [INF] Executed DbCommand ("27"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [DOMS_Order] ADD [UserId] nvarchar(450) NOT NULL DEFAULT N'';" (0723d8ff)
+2018-01-16T00:14:52.6584168+11:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX [IX_DOMS_Order_UserId] ON [DOMS_Order] ([UserId]);" (0723d8ff)
+2018-01-16T00:14:52.6628912+11:00  [INF] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""ALTER TABLE [DOMS_Order] ADD CONSTRAINT [FK_DOMS_Order_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE;" (0723d8ff)
+2018-01-16T00:14:52.6658455+11:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20180115131417_mig3', N'2.0.1-rtm-125');" (0723d8ff)
+2018-01-16T00:15:39.2080751+11:00 0HLAS3896BM2A:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44384/   (ca22a1cb)
+2018-01-16T00:15:39.5321667+11:00 0HLAS3896BM2A:00000001 [INF] Executing action method "DOMS.WebApp.Controllers.HomeController.Index (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-16T00:15:39.5725006+11:00 0HLAS3896BM2A:00000001 [INF] Executing RedirectResult, redirecting to "/Account/Login". (d98d540e)
+2018-01-16T00:15:39.5858909+11:00 0HLAS3896BM2A:00000001 [INF] Executed action "DOMS.WebApp.Controllers.HomeController.Index (DOMS.WebApp)" in 81.088ms (afa2e885)
+2018-01-16T00:15:39.6319073+11:00 0HLAS3896BM2A:00000001 [INF] Request finished in 467.7165ms 302  (791a596a)
+2018-01-16T00:15:39.6704725+11:00 0HLAS3896BM2A:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44384/Account/Login   (ca22a1cb)
+2018-01-16T00:15:39.9477212+11:00 0HLAS3896BM2A:00000002 [INF] Executing action method "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" with arguments ([""]) - ModelState is Valid (ba7f4ac2)
+2018-01-16T00:15:40.0143176+11:00 0HLAS3896BM2A:00000002 [INF] AuthenticationScheme: "Identity.External" signed out. (d3f50c8d)
+2018-01-16T00:15:45.6873693+11:00 0HLAS3896BM2A:00000002 [INF] Executing ViewResult, running view at path "/Views/Account/Login.cshtml". (9707eebe)
+2018-01-16T00:15:46.0032314+11:00 0HLAS3896BM2A:00000002 [INF] Executed action "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" in 6288.2251ms (afa2e885)
+2018-01-16T00:15:46.0430205+11:00 0HLAS3896BM2A:00000002 [INF] Request finished in 6375.6579ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-16T00:15:47.9689332+11:00 0HLAS3896BM2A:00000003 [INF] Request starting HTTP/1.1 POST http://localhost:44384/Account/Login application/x-www-form-urlencoded 246 (ca22a1cb)
+2018-01-16T00:15:48.2004389+11:00 0HLAS3896BM2A:00000003 [INF] Executing action method "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" with arguments (["DOMS.Model.ViewModels.AccountViewModels.LoginViewModel", ""]) - ModelState is Valid (ba7f4ac2)
+2018-01-16T00:15:49.7724669+11:00 0HLAS3896BM2A:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-16T00:15:50.7042068+11:00 0HLAS3896BM2A:00000003 [INF] Executed DbCommand ("73"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-01-16T00:15:51.3020652+11:00 0HLAS3896BM2A:00000003 [INF] Executed DbCommand ("3"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-01-16T00:15:51.4297405+11:00 0HLAS3896BM2A:00000003 [INF] Executed DbCommand ("3"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-01-16T00:15:51.4637968+11:00 0HLAS3896BM2A:00000003 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2018-01-16T00:15:51.4711052+11:00 0HLAS3896BM2A:00000003 [INF] User logged in. (fdce0db4)
+2018-01-16T00:15:51.4802354+11:00 0HLAS3896BM2A:00000003 [INF] Executing RedirectResult, redirecting to "/Home/Dashboard". (d98d540e)
+2018-01-16T00:15:51.4861689+11:00 0HLAS3896BM2A:00000003 [INF] Executed action "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" in 3491.9539ms (afa2e885)
+2018-01-16T00:15:51.4977185+11:00 0HLAS3896BM2A:00000003 [INF] Request finished in 3556.6679ms 302  (791a596a)
+2018-01-16T00:15:51.5269330+11:00 0HLAS3896BM2A:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44384/Home/Dashboard   (ca22a1cb)
+2018-01-16T00:15:51.5510890+11:00 0HLAS3896BM2A:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-16T00:15:51.5600794+11:00 0HLAS3896BM2A:00000004 [INF] Executing action method "DOMS.WebApp.Controllers.HomeController.Dashboard (DOMS.WebApp)" with arguments ([""]) - ModelState is Valid (ba7f4ac2)
+2018-01-16T00:15:51.8329062+11:00 0HLAS3896BM2A:00000004 [INF] Executing ViewResult, running view at path "/Views/Home/Dashboard.cshtml". (9707eebe)
+2018-01-16T00:15:52.8674259+11:00 0HLAS3896BM2A:00000004 [INF] Executed action "DOMS.WebApp.Controllers.HomeController.Dashboard (DOMS.WebApp)" in 1305.6299ms (afa2e885)
+2018-01-16T00:15:52.9035023+11:00 0HLAS3896BM2A:00000004 [INF] Request finished in 1366.5177ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-16T00:15:54.9460607+11:00 0HLAS3896BM2A:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44384/Order   (ca22a1cb)
+2018-01-16T00:15:54.9520594+11:00 0HLAS3896BM2A:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-16T00:15:54.9624420+11:00 0HLAS3896BM2A:00000005 [INF] Executing action method "DOMS.WebApp.Controllers.OrderController.Index (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-16T00:16:08.4841501+11:00 0HLAS3896BM2A:00000005 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-16T00:16:08.7451562+11:00 0HLAS3896BM2A:00000005 [INF] Executed DbCommand ("27"ms) [Parameters=["@__userName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[OrderId], [x].[CreatedTime], [x].[CustomerId], [x].[Deleted], [x].[DeletedTime], [x].[DeliveryId], [x].[Memo], [x].[PaymentMethod], [x].[PaymentStatus], [x].[ProductId], [x].[Quantity], [x].[SellPriceAud], [x].[SellPriceRmb], [x].[Status], [x].[UpdatedTime], [x].[UserId]
+FROM [DOMS_Order] AS [x]
+INNER JOIN [AspNetUsers] AS [x.User] ON [x].[UserId] = [x.User].[Id]
+WHERE [x.User].[UserName] = @__userName_0" (0723d8ff)
+2018-01-16T00:16:21.8565625+11:00 0HLAS3896BM2A:00000005 [INF] Executing ViewResult, running view at path "/Views/Order/Index.cshtml". (9707eebe)
+2018-01-16T00:16:21.9748157+11:00 0HLAS3896BM2A:00000005 [INF] Executed action "DOMS.WebApp.Controllers.OrderController.Index (DOMS.WebApp)" in 27008.361ms (afa2e885)
+2018-01-16T00:16:21.9867083+11:00 0HLAS3896BM2A:00000005 [INF] Request finished in 27035.3233ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-16T00:16:37.0655011+11:00 0HLAS3896BM2A:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:44384/Order   (ca22a1cb)
+2018-01-16T00:16:37.0753346+11:00 0HLAS3896BM2A:00000006 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-16T00:16:37.0823228+11:00 0HLAS3896BM2A:00000006 [INF] Executing action method "DOMS.WebApp.Controllers.OrderController.Index (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-16T00:16:39.0590860+11:00 0HLAS3896BM2A:00000006 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-16T00:16:39.0870897+11:00 0HLAS3896BM2A:00000006 [INF] Executed DbCommand ("0"ms) [Parameters=["@__userName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[OrderId], [x].[CreatedTime], [x].[CustomerId], [x].[Deleted], [x].[DeletedTime], [x].[DeliveryId], [x].[Memo], [x].[PaymentMethod], [x].[PaymentStatus], [x].[ProductId], [x].[Quantity], [x].[SellPriceAud], [x].[SellPriceRmb], [x].[Status], [x].[UpdatedTime], [x].[UserId]
+FROM [DOMS_Order] AS [x]
+INNER JOIN [AspNetUsers] AS [x.User] ON [x].[UserId] = [x.User].[Id]
+WHERE [x.User].[UserName] = @__userName_0" (0723d8ff)
+2018-01-16T00:16:39.0947791+11:00 0HLAS3896BM2A:00000006 [INF] Executing ViewResult, running view at path "/Views/Order/Index.cshtml". (9707eebe)
+2018-01-16T00:16:39.1039378+11:00 0HLAS3896BM2A:00000006 [INF] Executed action "DOMS.WebApp.Controllers.OrderController.Index (DOMS.WebApp)" in 2020.3583ms (afa2e885)
+2018-01-16T00:16:39.1248244+11:00 0HLAS3896BM2A:00000006 [INF] Request finished in 2045.9615ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-16T00:16:53.8592671+11:00 0HLAS3896BM2A:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:44384/Order   (ca22a1cb)
+2018-01-16T00:16:53.8663364+11:00 0HLAS3896BM2A:00000007 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-16T00:16:53.8920372+11:00 0HLAS3896BM2A:00000007 [INF] Executing action method "DOMS.WebApp.Controllers.OrderController.Index (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-16T00:16:56.0569345+11:00 0HLAS3896BM2A:00000007 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-16T00:16:56.0867049+11:00 0HLAS3896BM2A:00000007 [INF] Executed DbCommand ("0"ms) [Parameters=["@__userName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[OrderId], [x].[CreatedTime], [x].[CustomerId], [x].[Deleted], [x].[DeletedTime], [x].[DeliveryId], [x].[Memo], [x].[PaymentMethod], [x].[PaymentStatus], [x].[ProductId], [x].[Quantity], [x].[SellPriceAud], [x].[SellPriceRmb], [x].[Status], [x].[UpdatedTime], [x].[UserId]
+FROM [DOMS_Order] AS [x]
+INNER JOIN [AspNetUsers] AS [x.User] ON [x].[UserId] = [x.User].[Id]
+WHERE [x.User].[UserName] = @__userName_0" (0723d8ff)
+2018-01-16T00:16:56.0927809+11:00 0HLAS3896BM2A:00000007 [INF] Executing ViewResult, running view at path "/Views/Order/Index.cshtml". (9707eebe)
+2018-01-16T00:16:56.0998782+11:00 0HLAS3896BM2A:00000007 [INF] Executed action "DOMS.WebApp.Controllers.OrderController.Index (DOMS.WebApp)" in 2227.4266ms (afa2e885)
+2018-01-16T00:16:56.1067432+11:00 0HLAS3896BM2A:00000007 [INF] Request finished in 2246.8285ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-16T00:17:12.7998810+11:00 0HLAS3896BM2A:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:44384/Order/Create   (ca22a1cb)
+2018-01-16T00:17:12.8326218+11:00 0HLAS3896BM2A:00000008 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-16T00:17:12.8597978+11:00 0HLAS3896BM2A:00000008 [INF] Request finished in 54.3605ms 404  (791a596a)
+2018-01-16T00:22:35.5629923+11:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-16T00:23:02.0909431+11:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-16T00:23:02.2267849+11:00  [INF] Executed DbCommand ("8"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'__EFMigrationsHistory');" (0723d8ff)
+2018-01-16T00:23:02.2306058+11:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'__EFMigrationsHistory');" (0723d8ff)
+2018-01-16T00:23:02.2418572+11:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2018-01-16T00:23:02.2650829+11:00  [INF] Applying migration '"20180115132235_mig4"'. (0e2ac64d)
+2018-01-16T00:27:51.3178060+11:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-16T00:28:38.1051539+11:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-16T00:28:38.2292955+11:00  [INF] Executed DbCommand ("8"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'__EFMigrationsHistory');" (0723d8ff)
+2018-01-16T00:28:38.2328388+11:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'__EFMigrationsHistory');" (0723d8ff)
+2018-01-16T00:28:38.2435719+11:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2018-01-16T00:28:38.2649901+11:00  [INF] Applying migration '"20180115132751_mig4"'. (0e2ac64d)
+2018-01-16T00:28:38.4945185+11:00  [INF] Executed DbCommand ("162"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""EXEC sp_rename N'DOMS_Order.OrderId', N'OrderNo', N'COLUMN';" (0723d8ff)
+2018-01-16T00:28:38.4957135+11:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20180115132751_mig4', N'2.0.1-rtm-125');" (0723d8ff)
+2018-01-16T00:29:43.1943977+11:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-16T00:30:34.1522050+11:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-16T00:31:20.9310938+11:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-16T00:31:21.0676000+11:00  [INF] Executed DbCommand ("9"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'__EFMigrationsHistory');" (0723d8ff)
+2018-01-16T00:31:21.0723202+11:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'__EFMigrationsHistory');" (0723d8ff)
+2018-01-16T00:31:21.0805731+11:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2018-01-16T00:31:21.1000156+11:00  [INF] Applying migration '"20180115133034_mig5"'. (0e2ac64d)
+2018-01-16T00:33:22.8352739+11:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-16T00:33:22.9624890+11:00  [INF] Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'__EFMigrationsHistory');" (0723d8ff)
+2018-01-16T00:33:22.9650577+11:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'__EFMigrationsHistory');" (0723d8ff)
+2018-01-16T00:33:22.9745451+11:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2018-01-16T00:33:22.9975710+11:00  [INF] Applying migration '"20180115133034_mig5"'. (0e2ac64d)
+2018-01-16T00:35:16.1401284+11:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-16T00:35:40.2171445+11:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-16T00:35:40.3462030+11:00  [INF] Executed DbCommand ("9"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'__EFMigrationsHistory');" (0723d8ff)
+2018-01-16T00:35:40.3507803+11:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'__EFMigrationsHistory');" (0723d8ff)
+2018-01-16T00:35:40.3627474+11:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2018-01-16T00:35:40.3863753+11:00  [INF] Applying migration '"20180115133516_mig1"'. (0e2ac64d)
+2018-01-16T00:38:01.6220750+11:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-16T00:38:56.4678652+11:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-16T00:38:56.5801356+11:00  [INF] Executed DbCommand ("9"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'__EFMigrationsHistory');" (0723d8ff)
+2018-01-16T00:38:56.5842988+11:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'__EFMigrationsHistory');" (0723d8ff)
+2018-01-16T00:38:56.5947900+11:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2018-01-16T00:38:56.6204643+11:00  [INF] Applying migration '"20180115133801_mig1"'. (0e2ac64d)
+2018-01-16T00:38:56.8392565+11:00  [ERR] Failed executing DbCommand ("16"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+);" (627a98df)
+System.Data.SqlClient.SqlException (0x80131904): There is already an object named 'AspNetRoles' in the database.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.Design.Internal.MigrationsOperations.UpdateDatabase(String targetMigration, String contextType)
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.UpdateDatabase.<>c__DisplayClass0_1.<.ctor>b__0()
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.OperationBase.Execute(Action action)
+ClientConnectionId:4a47324a-1856-4bea-aea9-24dd706c7cf6
+Error Number:2714,State:6,Class:16
+2018-01-16T00:39:37.0688180+11:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-16T00:39:47.6992224+11:00  [INF] Executed DbCommand ("339"ms) [Parameters=[""], CommandType='Text', CommandTimeout='60']"
+""CREATE DATABASE [DOMS];" (0723d8ff)
+2018-01-16T00:39:47.8491954+11:00  [INF] Executed DbCommand ("145"ms) [Parameters=[""], CommandType='Text', CommandTimeout='60']"
+""IF SERVERPROPERTY('EngineEdition') <> 5 EXEC(N'ALTER DATABASE [DOMS] SET READ_COMMITTED_SNAPSHOT ON;');" (0723d8ff)
+2018-01-16T00:39:48.0817674+11:00  [INF] Executed DbCommand ("13"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);" (0723d8ff)
+2018-01-16T00:39:48.0940582+11:00  [INF] Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'__EFMigrationsHistory');" (0723d8ff)
+2018-01-16T00:39:48.1023983+11:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2018-01-16T00:39:48.1368592+11:00  [INF] Applying migration '"20180115133801_mig1"'. (0e2ac64d)
+2018-01-16T00:39:48.2676856+11:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+);" (0723d8ff)
+2018-01-16T00:39:48.2692071+11:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [AspNetUsers] (
+    [Id] nvarchar(450) NOT NULL,
+    [AccessFailedCount] int NOT NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [Email] nvarchar(256) NULL,
+    [EmailConfirmed] bit NOT NULL,
+    [LockoutEnabled] bit NOT NULL,
+    [LockoutEnd] datetimeoffset NULL,
+    [NormalizedEmail] nvarchar(256) NULL,
+    [NormalizedUserName] nvarchar(256) NULL,
+    [PasswordHash] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [PhoneNumberConfirmed] bit NOT NULL,
+    [SecurityStamp] nvarchar(max) NULL,
+    [TwoFactorEnabled] bit NOT NULL,
+    [UserName] nvarchar(256) NULL,
+    CONSTRAINT [PK_AspNetUsers] PRIMARY KEY ([Id])
+);" (0723d8ff)
+2018-01-16T00:39:48.2708742+11:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [DOMS_Country] (
+    [CountryId] int NOT NULL IDENTITY,
+    [CountryCode] nvarchar(max) NOT NULL,
+    [CountryName] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_DOMS_Country] PRIMARY KEY ([CountryId])
+);" (0723d8ff)
+2018-01-16T00:39:48.2724524+11:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [DOMS_Courier] (
+    [CourierId] int NOT NULL IDENTITY,
+    [Address] nvarchar(max) NULL,
+    [Name] nvarchar(max) NOT NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [QrCode] nvarchar(max) NULL,
+    [Wechat] nvarchar(max) NULL,
+    CONSTRAINT [PK_DOMS_Courier] PRIMARY KEY ([CourierId])
+);" (0723d8ff)
+2018-01-16T00:39:48.2740150+11:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [DOMS_Customer] (
+    [CustomerId] int NOT NULL IDENTITY,
+    [Address] nvarchar(max) NULL,
+    [AlipayAccount] nvarchar(max) NULL,
+    [CreatedTime] datetime2 NOT NULL,
+    [Deleted] bit NOT NULL,
+    [DeletedTime] datetime2 NOT NULL,
+    [IdCard] nvarchar(max) NULL,
+    [Name] nvarchar(max) NOT NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [UpdatedTime] datetime2 NOT NULL,
+    [WechatAccount] nvarchar(max) NULL,
+    [WechatName] nvarchar(max) NULL,
+    CONSTRAINT [PK_DOMS_Customer] PRIMARY KEY ([CustomerId])
+);" (0723d8ff)
+2018-01-16T00:39:48.3052936+11:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [DOMS_Family] (
+    [FamilyId] int NOT NULL IDENTITY,
+    [Memo] nvarchar(max) NULL,
+    [Name] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_DOMS_Family] PRIMARY KEY ([FamilyId])
+);" (0723d8ff)
+2018-01-16T00:39:48.3077161+11:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [AspNetRoleClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    [RoleId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_AspNetRoleClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AspNetRoleClaims_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AspNetRoles] ([Id]) ON DELETE CASCADE
+);" (0723d8ff)
+2018-01-16T00:39:48.3094334+11:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [AspNetUserClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    [UserId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_AspNetUserClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AspNetUserClaims_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);" (0723d8ff)
+2018-01-16T00:39:48.3229659+11:00  [INF] Executed DbCommand ("13"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [AspNetUserLogins] (
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [ProviderKey] nvarchar(450) NOT NULL,
+    [ProviderDisplayName] nvarchar(max) NULL,
+    [UserId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_AspNetUserLogins] PRIMARY KEY ([LoginProvider], [ProviderKey]),
+    CONSTRAINT [FK_AspNetUserLogins_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);" (0723d8ff)
+2018-01-16T00:39:48.4789736+11:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [AspNetUserRoles] (
+    [UserId] nvarchar(450) NOT NULL,
+    [RoleId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_AspNetUserRoles] PRIMARY KEY ([UserId], [RoleId]),
+    CONSTRAINT [FK_AspNetUserRoles_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AspNetRoles] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_AspNetUserRoles_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);" (0723d8ff)
+2018-01-16T00:39:48.4942648+11:00  [INF] Executed DbCommand ("15"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [AspNetUserTokens] (
+    [UserId] nvarchar(450) NOT NULL,
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [Name] nvarchar(450) NOT NULL,
+    [Value] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetUserTokens] PRIMARY KEY ([UserId], [LoginProvider], [Name]),
+    CONSTRAINT [FK_AspNetUserTokens_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);" (0723d8ff)
+2018-01-16T00:39:48.4968158+11:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [DOMS_Brand] (
+    [BrandId] int NOT NULL IDENTITY,
+    [BrandDescription] nvarchar(max) NULL,
+    [BrandLogo] nvarchar(max) NULL,
+    [BrandName] nvarchar(max) NOT NULL,
+    [CountryId] int NULL,
+    [CreatedTime] datetime2 NOT NULL,
+    [Deleted] bit NOT NULL,
+    [DeletedTime] datetime2 NOT NULL,
+    [UpdatedTime] datetime2 NOT NULL,
+    CONSTRAINT [PK_DOMS_Brand] PRIMARY KEY ([BrandId]),
+    CONSTRAINT [FK_DOMS_Brand_DOMS_Country_CountryId] FOREIGN KEY ([CountryId]) REFERENCES [DOMS_Country] ([CountryId]) ON DELETE NO ACTION
+);" (0723d8ff)
+2018-01-16T00:39:48.6998284+11:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [DOMS_Delivery] (
+    [DeliveryId] int NOT NULL IDENTITY,
+    [CourierId] int NOT NULL,
+    [CreatedTime] datetime2 NOT NULL,
+    [Deleted] bit NOT NULL,
+    [DeletedTime] datetime2 NOT NULL,
+    [TrackNumber] nvarchar(max) NOT NULL,
+    [UpdatedTime] datetime2 NOT NULL,
+    CONSTRAINT [PK_DOMS_Delivery] PRIMARY KEY ([DeliveryId]),
+    CONSTRAINT [FK_DOMS_Delivery_DOMS_Courier_CourierId] FOREIGN KEY ([CourierId]) REFERENCES [DOMS_Courier] ([CourierId]) ON DELETE CASCADE
+);" (0723d8ff)
+2018-01-16T00:39:48.7017737+11:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [DOMS_Catalogue] (
+    [CatalogueId] int NOT NULL IDENTITY,
+    [FamilyId] int NULL,
+    [Memo] nvarchar(max) NULL,
+    [Name] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_DOMS_Catalogue] PRIMARY KEY ([CatalogueId]),
+    CONSTRAINT [FK_DOMS_Catalogue_DOMS_Family_FamilyId] FOREIGN KEY ([FamilyId]) REFERENCES [DOMS_Family] ([FamilyId]) ON DELETE NO ACTION
+);" (0723d8ff)
+2018-01-16T00:39:48.7173699+11:00  [INF] Executed DbCommand ("15"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [DOMS_Product] (
+    [ProductId] int NOT NULL IDENTITY,
+    [BrandId] int NULL,
+    [CatalogueId] int NULL,
+    [CreatedTime] datetime2 NOT NULL,
+    [CurrentCostAud] decimal(18, 2) NOT NULL,
+    [CurrentCostRmb] decimal(18, 2) NOT NULL,
+    [CurrentSellPriceAud] decimal(18, 2) NOT NULL,
+    [CurrentSellPriceRmb] decimal(18, 2) NOT NULL,
+    [Deleted] bit NOT NULL,
+    [DeletedTime] datetime2 NOT NULL,
+    [Description] nvarchar(max) NULL,
+    [Labels] nvarchar(max) NULL,
+    [ProductName] nvarchar(max) NOT NULL,
+    [UpdatedTime] datetime2 NOT NULL,
+    CONSTRAINT [PK_DOMS_Product] PRIMARY KEY ([ProductId]),
+    CONSTRAINT [FK_DOMS_Product_DOMS_Brand_BrandId] FOREIGN KEY ([BrandId]) REFERENCES [DOMS_Brand] ([BrandId]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_DOMS_Product_DOMS_Catalogue_CatalogueId] FOREIGN KEY ([CatalogueId]) REFERENCES [DOMS_Catalogue] ([CatalogueId]) ON DELETE NO ACTION
+);" (0723d8ff)
+2018-01-16T00:39:48.8271252+11:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [DOMS_Order] (
+    [OrderNo] nvarchar(450) NOT NULL,
+    [CreatedTime] datetime2 NOT NULL,
+    [CustomerId] int NOT NULL,
+    [Deleted] bit NOT NULL,
+    [DeletedTime] datetime2 NOT NULL,
+    [DeliveryId] int NULL,
+    [Memo] nvarchar(max) NULL,
+    [PaymentMethod] int NULL,
+    [PaymentStatus] int NOT NULL,
+    [ProductId] int NOT NULL,
+    [Quantity] int NOT NULL,
+    [SellPriceAud] decimal(18, 2) NOT NULL,
+    [SellPriceRmb] decimal(18, 2) NOT NULL,
+    [Status] int NOT NULL,
+    [UpdatedTime] datetime2 NOT NULL,
+    [UserId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_DOMS_Order] PRIMARY KEY ([OrderNo]),
+    CONSTRAINT [FK_DOMS_Order_DOMS_Customer_CustomerId] FOREIGN KEY ([CustomerId]) REFERENCES [DOMS_Customer] ([CustomerId]) ON DELETE CASCADE,
+    CONSTRAINT [FK_DOMS_Order_DOMS_Delivery_DeliveryId] FOREIGN KEY ([DeliveryId]) REFERENCES [DOMS_Delivery] ([DeliveryId]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_DOMS_Order_DOMS_Product_ProductId] FOREIGN KEY ([ProductId]) REFERENCES [DOMS_Product] ([ProductId]) ON DELETE CASCADE,
+    CONSTRAINT [FK_DOMS_Order_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);" (0723d8ff)
+2018-01-16T00:39:48.9920425+11:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX [IX_AspNetRoleClaims_RoleId] ON [AspNetRoleClaims] ([RoleId]);" (0723d8ff)
+2018-01-16T00:39:49.0064653+11:00  [INF] Executed DbCommand ("14"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE UNIQUE INDEX [RoleNameIndex] ON [AspNetRoles] ([NormalizedName]) WHERE [NormalizedName] IS NOT NULL;" (0723d8ff)
+2018-01-16T00:39:49.0080848+11:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX [IX_AspNetUserClaims_UserId] ON [AspNetUserClaims] ([UserId]);" (0723d8ff)
+2018-01-16T00:39:49.0097305+11:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX [IX_AspNetUserLogins_UserId] ON [AspNetUserLogins] ([UserId]);" (0723d8ff)
+2018-01-16T00:39:49.0108067+11:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX [IX_AspNetUserRoles_RoleId] ON [AspNetUserRoles] ([RoleId]);" (0723d8ff)
+2018-01-16T00:39:49.0119089+11:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX [EmailIndex] ON [AspNetUsers] ([NormalizedEmail]);" (0723d8ff)
+2018-01-16T00:39:49.0133043+11:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE UNIQUE INDEX [UserNameIndex] ON [AspNetUsers] ([NormalizedUserName]) WHERE [NormalizedUserName] IS NOT NULL;" (0723d8ff)
+2018-01-16T00:39:49.0144543+11:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX [IX_DOMS_Brand_CountryId] ON [DOMS_Brand] ([CountryId]);" (0723d8ff)
+2018-01-16T00:39:49.0154882+11:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX [IX_DOMS_Catalogue_FamilyId] ON [DOMS_Catalogue] ([FamilyId]);" (0723d8ff)
+2018-01-16T00:39:49.1852365+11:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX [IX_DOMS_Delivery_CourierId] ON [DOMS_Delivery] ([CourierId]);" (0723d8ff)
+2018-01-16T00:39:49.1861116+11:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX [IX_DOMS_Order_CustomerId] ON [DOMS_Order] ([CustomerId]);" (0723d8ff)
+2018-01-16T00:39:49.1870356+11:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX [IX_DOMS_Order_DeliveryId] ON [DOMS_Order] ([DeliveryId]);" (0723d8ff)
+2018-01-16T00:39:49.1878842+11:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX [IX_DOMS_Order_ProductId] ON [DOMS_Order] ([ProductId]);" (0723d8ff)
+2018-01-16T00:39:49.1887320+11:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX [IX_DOMS_Order_UserId] ON [DOMS_Order] ([UserId]);" (0723d8ff)
+2018-01-16T00:39:49.1896494+11:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX [IX_DOMS_Product_BrandId] ON [DOMS_Product] ([BrandId]);" (0723d8ff)
+2018-01-16T00:39:49.1908124+11:00  [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX [IX_DOMS_Product_CatalogueId] ON [DOMS_Product] ([CatalogueId]);" (0723d8ff)
+2018-01-16T00:39:49.1924567+11:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20180115133801_mig1', N'2.0.1-rtm-125');" (0723d8ff)
+2018-01-16T00:40:57.6279424+11:00 0HLAS3MDMQVBG:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44384/   (ca22a1cb)
+2018-01-16T00:40:58.0136425+11:00 0HLAS3MDMQVBG:00000001 [INF] Executing action method "DOMS.WebApp.Controllers.HomeController.Index (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-16T00:40:58.0329713+11:00 0HLAS3MDMQVBG:00000001 [INF] Executing RedirectResult, redirecting to "/Account/Login". (d98d540e)
+2018-01-16T00:40:58.0663587+11:00 0HLAS3MDMQVBG:00000001 [INF] Executed action "DOMS.WebApp.Controllers.HomeController.Index (DOMS.WebApp)" in 44.9316ms (afa2e885)
+2018-01-16T00:40:58.0958174+11:00 0HLAS3MDMQVBG:00000001 [INF] Request finished in 538.732ms 302  (791a596a)
+2018-01-16T00:40:58.1351605+11:00 0HLAS3MDMQVBG:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44384/Account/Login   (ca22a1cb)
+2018-01-16T00:40:58.4558241+11:00 0HLAS3MDMQVBG:00000002 [INF] Executing action method "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" with arguments ([""]) - ModelState is Valid (ba7f4ac2)
+2018-01-16T00:40:58.5233090+11:00 0HLAS3MDMQVBG:00000002 [INF] AuthenticationScheme: "Identity.External" signed out. (d3f50c8d)
+2018-01-16T00:41:04.2722738+11:00 0HLAS3MDMQVBG:00000002 [INF] Executing ViewResult, running view at path "/Views/Account/Login.cshtml". (9707eebe)
+2018-01-16T00:41:04.4723196+11:00 0HLAS3MDMQVBG:00000002 [INF] Executed action "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" in 6291.2011ms (afa2e885)
+2018-01-16T00:41:04.4836247+11:00 0HLAS3MDMQVBG:00000002 [INF] Request finished in 6365.9291ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-16T00:41:07.5836283+11:00 0HLAS3MDMQVBG:00000003 [INF] Request starting HTTP/1.1 POST http://localhost:44384/Account/Login application/x-www-form-urlencoded 246 (ca22a1cb)
+2018-01-16T00:41:07.7121919+11:00 0HLAS3MDMQVBG:00000003 [INF] Executing action method "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" with arguments (["DOMS.Model.ViewModels.AccountViewModels.LoginViewModel", ""]) - ModelState is Valid (ba7f4ac2)
+2018-01-16T00:41:08.7974411+11:00 0HLAS3MDMQVBG:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-16T00:41:09.5980603+11:00 0HLAS3MDMQVBG:00000003 [INF] Executed DbCommand ("62"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-01-16T00:41:09.6583180+11:00 0HLAS3MDMQVBG:00000003 [INF] Executing ViewResult, running view at path "/Views/Account/Login.cshtml". (9707eebe)
+2018-01-16T00:41:09.6701177+11:00 0HLAS3MDMQVBG:00000003 [INF] Executed action "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" in 2063.5967ms (afa2e885)
+2018-01-16T00:41:09.6857910+11:00 0HLAS3MDMQVBG:00000003 [INF] Request finished in 2106.8892ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-16T00:41:12.0068415+11:00 0HLAS3MDMQVBG:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44384/Account/Register   (ca22a1cb)
+2018-01-16T00:41:12.0312856+11:00 0HLAS3MDMQVBG:00000004 [INF] Executing action method "DOMS.WebApp.Controllers.AccountController.Register (DOMS.WebApp)" with arguments ([""]) - ModelState is Valid (ba7f4ac2)
+2018-01-16T00:41:12.3889819+11:00 0HLAS3MDMQVBG:00000004 [INF] Executing ViewResult, running view at path "/Views/Account/Register.cshtml". (9707eebe)
+2018-01-16T00:41:13.2016584+11:00 0HLAS3MDMQVBG:00000004 [INF] Executed action "DOMS.WebApp.Controllers.AccountController.Register (DOMS.WebApp)" in 1178.555ms (afa2e885)
+2018-01-16T00:41:13.2099777+11:00 0HLAS3MDMQVBG:00000004 [INF] Request finished in 1211.1212ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-16T00:41:13.2277452+11:00 0HLAS3MDMQVBG:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44384/lib/jquery-validation/dist/jquery.validate.js   (ca22a1cb)
+2018-01-16T00:41:13.2381772+11:00 0HLAS3MDMQVBH:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44384/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js   (ca22a1cb)
+2018-01-16T00:41:13.3066352+11:00 0HLAS3MDMQVBG:00000005 [INF] Sending file. Request path: '"/lib/jquery-validation/dist/jquery.validate.js"'. Physical path: '"D:\Dean's\Practices\DOMS\DOMS.WebApp\wwwroot\lib\jquery-validation\dist\jquery.validate.js"' (27b0a520)
+2018-01-16T00:41:13.3278958+11:00 0HLAS3MDMQVBH:00000001 [INF] Sending file. Request path: '"/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"'. Physical path: '"D:\Dean's\Practices\DOMS\DOMS.WebApp\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js"' (27b0a520)
+2018-01-16T00:41:13.3780182+11:00 0HLAS3MDMQVBH:00000001 [INF] Request finished in 118.5336ms 200 application/javascript (791a596a)
+2018-01-16T00:41:13.3811286+11:00 0HLAS3MDMQVBG:00000005 [INF] Request finished in 127.8227ms 200 application/javascript (791a596a)
+2018-01-16T00:41:27.1150482+11:00 0HLAS3MDMQVBH:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:44384/Account/Register application/x-www-form-urlencoded 249 (ca22a1cb)
+2018-01-16T00:41:27.1636160+11:00 0HLAS3MDMQVBH:00000002 [INF] Executing action method "DOMS.WebApp.Controllers.AccountController.Register (DOMS.WebApp)" with arguments (["DOMS.Model.ViewModels.AccountViewModels.RegisterViewModel", ""]) - ModelState is Valid (ba7f4ac2)
+2018-01-16T00:41:27.2713838+11:00 0HLAS3MDMQVBH:00000002 [WRN] User "e4a7bb42-0879-4396-9551-1d6715c82cd6" password validation failed: "PasswordRequiresNonAlphanumeric;PasswordRequiresLower;PasswordRequiresUpper". (2f223212)
+2018-01-16T00:41:27.2988553+11:00 0HLAS3MDMQVBH:00000002 [INF] Executing ViewResult, running view at path "/Views/Account/Register.cshtml". (9707eebe)
+2018-01-16T00:41:27.3096045+11:00 0HLAS3MDMQVBH:00000002 [INF] Executed action "DOMS.WebApp.Controllers.AccountController.Register (DOMS.WebApp)" in 162.5151ms (afa2e885)
+2018-01-16T00:41:27.3184551+11:00 0HLAS3MDMQVBH:00000002 [INF] Request finished in 206.3457ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-16T00:41:44.7587492+11:00 0HLAS3MDMQVBG:00000006 [INF] Request starting HTTP/1.1 POST http://localhost:44384/Account/Register application/x-www-form-urlencoded 255 (ca22a1cb)
+2018-01-16T00:41:44.7660092+11:00 0HLAS3MDMQVBG:00000006 [INF] Executing action method "DOMS.WebApp.Controllers.AccountController.Register (DOMS.WebApp)" with arguments (["DOMS.Model.ViewModels.AccountViewModels.RegisterViewModel", ""]) - ModelState is Valid (ba7f4ac2)
+2018-01-16T00:41:44.8595781+11:00 0HLAS3MDMQVBG:00000006 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-16T00:41:44.8944403+11:00 0HLAS3MDMQVBG:00000006 [INF] Executed DbCommand ("10"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-01-16T00:41:45.4063453+11:00 0HLAS3MDMQVBG:00000006 [INF] Executed DbCommand ("17"ms) [Parameters=["@p0='?' (Size = 450), @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?', @p5='?', @p6='?', @p7='?' (Size = 256), @p8='?' (Size = 256), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?', @p12='?' (Size = 4000), @p13='?', @p14='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14);" (0723d8ff)
+2018-01-16T00:41:45.4504967+11:00 0HLAS3MDMQVBG:00000006 [INF] User created a new account with password. (693a7015)
+2018-01-16T00:41:45.6705325+11:00 0HLAS3MDMQVBG:00000006 [INF] Executed DbCommand ("4"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-01-16T00:41:45.7996183+11:00 0HLAS3MDMQVBG:00000006 [INF] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-01-16T00:41:45.8349455+11:00 0HLAS3MDMQVBG:00000006 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2018-01-16T00:41:45.8397432+11:00 0HLAS3MDMQVBG:00000006 [INF] User created a new account with password. (693a7015)
+2018-01-16T00:41:45.8456620+11:00 0HLAS3MDMQVBG:00000006 [INF] Executing RedirectResult, redirecting to "/Home/Dashboard". (d98d540e)
+2018-01-16T00:41:45.8509290+11:00 0HLAS3MDMQVBG:00000006 [INF] Executed action "DOMS.WebApp.Controllers.AccountController.Register (DOMS.WebApp)" in 1086.6628ms (afa2e885)
+2018-01-16T00:41:45.8569300+11:00 0HLAS3MDMQVBG:00000006 [INF] Request finished in 1117.529ms 302  (791a596a)
+2018-01-16T00:41:45.8850430+11:00 0HLAS3MDMQVBH:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44384/Home/Dashboard   (ca22a1cb)
+2018-01-16T00:41:45.9317915+11:00 0HLAS3MDMQVBH:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-16T00:41:45.9420556+11:00 0HLAS3MDMQVBH:00000003 [INF] Executing action method "DOMS.WebApp.Controllers.HomeController.Dashboard (DOMS.WebApp)" with arguments ([""]) - ModelState is Valid (ba7f4ac2)
+2018-01-16T00:41:46.1280785+11:00 0HLAS3MDMQVBH:00000003 [INF] Executing ViewResult, running view at path "/Views/Home/Dashboard.cshtml". (9707eebe)
+2018-01-16T00:41:46.1477961+11:00 0HLAS3MDMQVBH:00000003 [INF] Executed action "DOMS.WebApp.Controllers.HomeController.Dashboard (DOMS.WebApp)" in 203.0817ms (afa2e885)
+2018-01-16T00:41:46.1542929+11:00 0HLAS3MDMQVBH:00000003 [INF] Request finished in 290.8957ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-16T00:41:58.1460835+11:00 0HLAS3MDMQVBG:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:44384/Home/Dashboard   (ca22a1cb)
+2018-01-16T00:41:58.1658184+11:00 0HLAS3MDMQVBG:00000007 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-16T00:41:58.1850027+11:00 0HLAS3MDMQVBG:00000007 [INF] Executing action method "DOMS.WebApp.Controllers.HomeController.Dashboard (DOMS.WebApp)" with arguments ([""]) - ModelState is Valid (ba7f4ac2)
+2018-01-16T00:41:58.2015225+11:00 0HLAS3MDMQVBG:00000007 [INF] Executing ViewResult, running view at path "/Views/Home/Dashboard.cshtml". (9707eebe)
+2018-01-16T00:41:58.2173183+11:00 0HLAS3MDMQVBG:00000007 [INF] Executed action "DOMS.WebApp.Controllers.HomeController.Dashboard (DOMS.WebApp)" in 37.8157ms (afa2e885)
+2018-01-16T00:41:58.2598764+11:00 0HLAS3MDMQVBG:00000007 [INF] Request finished in 94.0884ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-16T00:41:58.3644399+11:00 0HLAS3MDMQVBH:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44384/favicon.ico   (ca22a1cb)
+2018-01-16T00:41:58.3700806+11:00 0HLAS3MDMQVBH:00000004 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"D:\Dean's\Practices\DOMS\DOMS.WebApp\wwwroot\favicon.ico"' (27b0a520)
+2018-01-16T00:41:58.3799196+11:00 0HLAS3MDMQVBH:00000004 [INF] Request finished in 12.0233ms 200 image/x-icon (791a596a)
+2018-01-16T00:42:00.1864770+11:00 0HLAS3MDMQVBG:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:44384/Order   (ca22a1cb)
+2018-01-16T00:42:00.2059959+11:00 0HLAS3MDMQVBG:00000008 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-16T00:42:00.2513427+11:00 0HLAS3MDMQVBG:00000008 [INF] Executing action method "DOMS.WebApp.Controllers.OrderController.Index (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-16T00:42:03.0956234+11:00 0HLAS3MDMQVBG:00000008 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-16T00:42:03.2261662+11:00 0HLAS3MDMQVBG:00000008 [INF] Executed DbCommand ("7"ms) [Parameters=["@__userName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[OrderNo], [x].[CreatedTime], [x].[CustomerId], [x].[Deleted], [x].[DeletedTime], [x].[DeliveryId], [x].[Memo], [x].[PaymentMethod], [x].[PaymentStatus], [x].[ProductId], [x].[Quantity], [x].[SellPriceAud], [x].[SellPriceRmb], [x].[Status], [x].[UpdatedTime], [x].[UserId]
+FROM [DOMS_Order] AS [x]
+INNER JOIN [AspNetUsers] AS [x.User] ON [x].[UserId] = [x.User].[Id]
+WHERE [x.User].[UserName] = @__userName_0" (0723d8ff)
+2018-01-16T00:42:03.6422666+11:00 0HLAS3MDMQVBG:00000008 [INF] Executing ViewResult, running view at path "/Views/Order/Index.cshtml". (9707eebe)
+2018-01-16T00:42:03.6985969+11:00 0HLAS3MDMQVBG:00000008 [INF] Executed action "DOMS.WebApp.Controllers.OrderController.Index (DOMS.WebApp)" in 3480.6496ms (afa2e885)
+2018-01-16T00:42:03.7055236+11:00 0HLAS3MDMQVBG:00000008 [INF] Request finished in 3530.9181ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-16T00:44:25.7274799+11:00 0HLAS3MDMQVBI:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44384/Order   (ca22a1cb)
+2018-01-16T00:44:25.7336931+11:00 0HLAS3MDMQVBI:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-16T00:44:25.7391228+11:00 0HLAS3MDMQVBI:00000001 [INF] Executing action method "DOMS.WebApp.Controllers.OrderController.Index (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-16T00:44:27.8036879+11:00 0HLAS3MDMQVBI:00000001 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-16T00:44:27.8346978+11:00 0HLAS3MDMQVBI:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=["@__userName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[OrderNo], [x].[CreatedTime], [x].[CustomerId], [x].[Deleted], [x].[DeletedTime], [x].[DeliveryId], [x].[Memo], [x].[PaymentMethod], [x].[PaymentStatus], [x].[ProductId], [x].[Quantity], [x].[SellPriceAud], [x].[SellPriceRmb], [x].[Status], [x].[UpdatedTime], [x].[UserId]
+FROM [DOMS_Order] AS [x]
+INNER JOIN [AspNetUsers] AS [x.User] ON [x].[UserId] = [x.User].[Id]
+WHERE [x.User].[UserName] = @__userName_0" (0723d8ff)
+2018-01-16T00:44:28.0860087+11:00 0HLAS3MDMQVBI:00000001 [INF] Executing ViewResult, running view at path "/Views/Order/Index.cshtml". (9707eebe)
+2018-01-16T00:44:28.1202587+11:00 0HLAS3MDMQVBI:00000001 [INF] Executed action "DOMS.WebApp.Controllers.OrderController.Index (DOMS.WebApp)" in 2380.8763ms (afa2e885)
+2018-01-16T00:44:28.1253629+11:00 0HLAS3MDMQVBI:00000001 [INF] Request finished in 2398.5889ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-16T00:44:28.2556880+11:00 0HLAS3MDMQVBI:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44384/favicon.ico   (ca22a1cb)
+2018-01-16T00:44:28.2704815+11:00 0HLAS3MDMQVBI:00000002 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"D:\Dean's\Practices\DOMS\DOMS.WebApp\wwwroot\favicon.ico"' (27b0a520)
+2018-01-16T00:44:28.2824759+11:00 0HLAS3MDMQVBI:00000002 [INF] Request finished in 21.8832ms 200 image/x-icon (791a596a)
+2018-01-16T00:45:46.0625685+11:00 0HLAS3MDMQVBJ:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44384/Order   (ca22a1cb)
+2018-01-16T00:45:46.0722871+11:00 0HLAS3MDMQVBJ:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-16T00:45:46.0997052+11:00 0HLAS3MDMQVBJ:00000001 [INF] Executing action method "DOMS.WebApp.Controllers.OrderController.Index (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-16T00:45:50.5790677+11:00 0HLAS3MDMQVBJ:00000001 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-16T00:45:50.6120195+11:00 0HLAS3MDMQVBJ:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=["@__userName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[OrderNo], [x].[CreatedTime], [x].[CustomerId], [x].[Deleted], [x].[DeletedTime], [x].[DeliveryId], [x].[Memo], [x].[PaymentMethod], [x].[PaymentStatus], [x].[ProductId], [x].[Quantity], [x].[SellPriceAud], [x].[SellPriceRmb], [x].[Status], [x].[UpdatedTime], [x].[UserId]
+FROM [DOMS_Order] AS [x]
+INNER JOIN [AspNetUsers] AS [x.User] ON [x].[UserId] = [x.User].[Id]
+WHERE [x.User].[UserName] = @__userName_0" (0723d8ff)
+2018-01-16T00:45:50.8205574+11:00 0HLAS3MDMQVBJ:00000001 [INF] Executing ViewResult, running view at path "/Views/Order/Index.cshtml". (9707eebe)
+2018-01-16T00:45:50.8423913+11:00 0HLAS3MDMQVBJ:00000001 [INF] Executed action "DOMS.WebApp.Controllers.OrderController.Index (DOMS.WebApp)" in 4763.1629ms (afa2e885)
+2018-01-16T00:45:50.8481607+11:00 0HLAS3MDMQVBJ:00000001 [INF] Request finished in 4798.2986ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-16T00:45:50.9792097+11:00 0HLAS3MDMQVBJ:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44384/favicon.ico   (ca22a1cb)
+2018-01-16T00:45:50.9851126+11:00 0HLAS3MDMQVBJ:00000002 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"D:\Dean's\Practices\DOMS\DOMS.WebApp\wwwroot\favicon.ico"' (27b0a520)
+2018-01-16T00:45:51.0035348+11:00 0HLAS3MDMQVBJ:00000002 [INF] Request finished in 11.4856ms 200 image/x-icon (791a596a)

@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DOMS.Model\DOMS.Model.csproj" />
+    <ProjectReference Include="..\DOMS.Service.Interface\DOMS.Interface.csproj" />
   </ItemGroup>
 
 </Project>

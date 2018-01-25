@@ -1,0 +1,64 @@
+2018-01-17T23:22:32.5809331+11:00 0HLATKJTTFUS6:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44384/   (ca22a1cb)
+2018-01-17T23:22:32.9989307+11:00 0HLATKJTTFUS6:00000001 [INF] Executing action method "DOMS.WebApp.Controllers.HomeController.Index (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-17T23:22:33.0463721+11:00 0HLATKJTTFUS6:00000001 [INF] Executing RedirectResult, redirecting to "/Account/Login". (d98d540e)
+2018-01-17T23:22:33.0641373+11:00 0HLATKJTTFUS6:00000001 [INF] Executed action "DOMS.WebApp.Controllers.HomeController.Index (DOMS.WebApp)" in 76.9304ms (afa2e885)
+2018-01-17T23:22:33.0992559+11:00 0HLATKJTTFUS6:00000001 [INF] Request finished in 561.4209ms 302  (791a596a)
+2018-01-17T23:22:33.1220886+11:00 0HLATKJTTFUS6:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44384/Account/Login   (ca22a1cb)
+2018-01-17T23:22:33.4463742+11:00 0HLATKJTTFUS6:00000002 [INF] Executing action method "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" with arguments ([""]) - ModelState is Valid (ba7f4ac2)
+2018-01-17T23:22:33.4859575+11:00 0HLATKJTTFUS6:00000002 [INF] AuthenticationScheme: "Identity.External" signed out. (d3f50c8d)
+2018-01-17T23:22:38.2047340+11:00 0HLATKJTTFUS6:00000002 [INF] Executing ViewResult, running view at path "/Views/Account/Login.cshtml". (9707eebe)
+2018-01-17T23:22:38.4541309+11:00 0HLATKJTTFUS6:00000002 [INF] Executed action "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" in 5264.7351ms (afa2e885)
+2018-01-17T23:22:38.4952102+11:00 0HLATKJTTFUS6:00000002 [INF] Request finished in 5353.5917ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-17T23:22:50.1056658+11:00 0HLATKJTTFUS6:00000003 [INF] Request starting HTTP/1.1 POST http://localhost:44384/Account/Login application/x-www-form-urlencoded 246 (ca22a1cb)
+2018-01-17T23:22:50.3575405+11:00 0HLATKJTTFUS6:00000003 [INF] Executing action method "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" with arguments (["DOMS.Model.ViewModels.AccountViewModels.LoginViewModel", ""]) - ModelState is Valid (ba7f4ac2)
+2018-01-17T23:22:52.1475938+11:00 0HLATKJTTFUS6:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-17T23:22:53.4837297+11:00 0HLATKJTTFUS6:00000003 [INF] Executed DbCommand ("145"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-01-17T23:22:54.1986461+11:00 0HLATKJTTFUS6:00000003 [INF] Executed DbCommand ("3"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-01-17T23:22:54.2896084+11:00 0HLATKJTTFUS6:00000003 [INF] Executed DbCommand ("3"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-01-17T23:22:54.3220347+11:00 0HLATKJTTFUS6:00000003 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2018-01-17T23:22:54.3295033+11:00 0HLATKJTTFUS6:00000003 [INF] User logged in. (fdce0db4)
+2018-01-17T23:22:54.3401649+11:00 0HLATKJTTFUS6:00000003 [INF] Executing RedirectResult, redirecting to "/Home/Dashboard". (d98d540e)
+2018-01-17T23:22:54.3472578+11:00 0HLATKJTTFUS6:00000003 [INF] Executed action "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" in 4203.2839ms (afa2e885)
+2018-01-17T23:22:54.3571933+11:00 0HLATKJTTFUS6:00000003 [INF] Request finished in 4278.0001ms 302  (791a596a)
+2018-01-17T23:22:54.3745108+11:00 0HLATKJTTFUS6:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44384/Home/Dashboard   (ca22a1cb)
+2018-01-17T23:22:54.3960658+11:00 0HLATKJTTFUS6:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-17T23:22:54.4048208+11:00 0HLATKJTTFUS6:00000004 [INF] Executing action method "DOMS.WebApp.Controllers.HomeController.Dashboard (DOMS.WebApp)" with arguments ([""]) - ModelState is Valid (ba7f4ac2)
+2018-01-17T23:22:54.5596527+11:00 0HLATKJTTFUS6:00000004 [INF] Executing ViewResult, running view at path "/Views/Home/Dashboard.cshtml". (9707eebe)
+2018-01-17T23:22:55.2990523+11:00 0HLATKJTTFUS6:00000004 [INF] Executed action "DOMS.WebApp.Controllers.HomeController.Dashboard (DOMS.WebApp)" in 889.2838ms (afa2e885)
+2018-01-17T23:22:55.3135847+11:00 0HLATKJTTFUS6:00000004 [INF] Request finished in 930.4255ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-17T23:22:59.1840920+11:00 0HLATKJTTFUS6:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44384/Order   (ca22a1cb)
+2018-01-17T23:22:59.1985762+11:00 0HLATKJTTFUS6:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-17T23:22:59.2149946+11:00 0HLATKJTTFUS6:00000005 [INF] Executing action method "DOMS.WebApp.Controllers.OrderController.Index (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-17T23:23:02.1479107+11:00 0HLATKJTTFUS6:00000005 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-17T23:23:02.2643722+11:00 0HLATKJTTFUS6:00000005 [INF] Executed DbCommand ("3"ms) [Parameters=["@__userName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[OrderNo], [x].[CreatedTime], [x].[CustomerId], [x].[Deleted], [x].[DeletedTime], [x].[DeliveryId], [x].[Memo], [x].[PaymentMethod], [x].[PaymentStatus], [x].[ProductId], [x].[Quantity], [x].[SellPriceAud], [x].[SellPriceRmb], [x].[Status], [x].[UpdatedTime], [x].[UserId]
+FROM [DOMS_Order] AS [x]
+INNER JOIN [AspNetUsers] AS [x.User] ON [x].[UserId] = [x.User].[Id]
+WHERE [x.User].[UserName] = @__userName_0" (0723d8ff)
+2018-01-17T23:23:02.7478952+11:00 0HLATKJTTFUS6:00000005 [INF] Executing ViewResult, running view at path "/Views/Order/Index.cshtml". (9707eebe)
+2018-01-17T23:23:02.9203900+11:00 0HLATKJTTFUS6:00000005 [INF] Executed action "DOMS.WebApp.Controllers.OrderController.Index (DOMS.WebApp)" in 3698.3854ms (afa2e885)
+2018-01-17T23:23:02.9415720+11:00 0HLATKJTTFUS6:00000005 [INF] Request finished in 3758.7272ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-17T23:23:05.8358044+11:00 0HLATKJTTFUS6:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:44384/Product   (ca22a1cb)
+2018-01-17T23:23:05.8530824+11:00 0HLATKJTTFUS6:00000006 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-17T23:23:05.8747236+11:00 0HLATKJTTFUS6:00000006 [INF] Executing action method "DOMS.WebApp.Controllers.ProductController.Index (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-17T23:25:46.2311625+11:00 0HLATKLNK99LP:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44384/   (ca22a1cb)
+2018-01-17T23:25:46.5789049+11:00 0HLATKLNK99LP:00000001 [INF] Executing action method "DOMS.WebApp.Controllers.HomeController.Index (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-17T23:25:46.6310705+11:00 0HLATKLNK99LP:00000001 [INF] Executing RedirectResult, redirecting to "/Account/Login". (d98d540e)
+2018-01-17T23:25:46.6715968+11:00 0HLATKLNK99LP:00000001 [INF] Executed action "DOMS.WebApp.Controllers.HomeController.Index (DOMS.WebApp)" in 89.6356ms (afa2e885)
+2018-01-17T23:25:46.7264650+11:00 0HLATKLNK99LP:00000001 [INF] Request finished in 550.9162ms 302  (791a596a)
+2018-01-17T23:25:46.7774530+11:00 0HLATKLNK99LP:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44384/Account/Login   (ca22a1cb)
+2018-01-17T23:25:47.2057074+11:00 0HLATKLNK99LP:00000002 [INF] Executing action method "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" with arguments ([""]) - ModelState is Valid (ba7f4ac2)
+2018-01-17T23:25:47.2681328+11:00 0HLATKLNK99LP:00000002 [INF] AuthenticationScheme: "Identity.External" signed out. (d3f50c8d)
+2018-01-17T23:25:53.5759827+11:00 0HLATKLNK99LP:00000002 [INF] Executing ViewResult, running view at path "/Views/Account/Login.cshtml". (9707eebe)
+2018-01-17T23:25:53.8839155+11:00 0HLATKLNK99LP:00000002 [INF] Executed action "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" in 7008.4744ms (afa2e885)
+2018-01-17T23:25:53.8995481+11:00 0HLATKLNK99LP:00000002 [INF] Request finished in 7140.7985ms 200 text/html; charset=utf-8 (791a596a)

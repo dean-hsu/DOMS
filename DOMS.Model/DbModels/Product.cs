@@ -20,5 +20,8 @@ namespace DOMS.Model.DbModels
         public decimal CurrentSellPriceRmb { get; set; }
         public Catalogue Catalogue { get; set; }
         public string Labels { get; set; }
+        [Required]
+        public ApplicationUser CreatedUser { get; set; }
+        public bool IsPublic { get; set; }
     }
 }

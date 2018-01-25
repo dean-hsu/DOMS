@@ -1,0 +1,107 @@
+﻿@model IEnumerable<DOMS.Model.DbModels.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CurrentCostAud)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CurrentCostRmb)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CurrentSellPriceAud)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CurrentSellPriceRmb)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Labels)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IsPublic)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreatedTime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UpdatedTime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DeletedTime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Deleted)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurrentCostAud)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurrentCostRmb)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurrentSellPriceAud)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurrentSellPriceRmb)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Labels)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsPublic)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeletedTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Deleted)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

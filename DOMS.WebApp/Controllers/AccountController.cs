@@ -450,10 +450,7 @@ namespace DOMS.WebApp.Controllers
             {
                 return Redirect(returnUrl);
             }
-            else
-            {
-                return RedirectToAction(nameof(HomeController.Index), "Home");
-            }
+            return RedirectToAction(nameof(HomeController.Dashboard), "Home");
         }
 
         #endregion

@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DOMS.WebApp", "DOMS.WebApp\DOMS.WebApp.csproj", "{21B44116-2FAC-4F8E-9ABC-93875AE8E000}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DOMS.WebApp", "DOMS.WebApp\DOMS.WebApp.csproj", "{21B44116-2FAC-4F8E-9ABC-93875AE8E000}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DOMS.Api", "DOMS.Api\DOMS.Api.csproj", "{FABE68FF-24B1-41AD-A28B-A49100BAE136}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DOMS.Api", "DOMS.Api\DOMS.Api.csproj", "{FABE68FF-24B1-41AD-A28B-A49100BAE136}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DOMS.Service", "DOMS.Service\DOMS.Service.csproj", "{3642AFD6-1379-4618-90B2-8D359D0AE3E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DOMS.Service", "DOMS.Service\DOMS.Service.csproj", "{3642AFD6-1379-4618-90B2-8D359D0AE3E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DOMS.Model", "DOMS.Model\DOMS.Model.csproj", "{51A2FBF3-FFD1-49E2-839A-BCFF180137F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DOMS.Model", "DOMS.Model\DOMS.Model.csproj", "{51A2FBF3-FFD1-49E2-839A-BCFF180137F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DOMS.Repository", "DOMS.Repository\DOMS.Repository.csproj", "{B1E68524-32AA-473F-B66C-DC90C981B0E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DOMS.Repository", "DOMS.Repository\DOMS.Repository.csproj", "{B1E68524-32AA-473F-B66C-DC90C981B0E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DOMS.Service.Extensions", "DOMS.Service.Extensions\DOMS.Service.Extensions.csproj", "{B624EF70-6E38-4F14-B708-CBF3B7696948}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DOMS.Service.Extensions", "DOMS.Service.Extensions\DOMS.Service.Extensions.csproj", "{B624EF70-6E38-4F14-B708-CBF3B7696948}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DOMS.Interface", "DOMS.Service.Interface\DOMS.Interface.csproj", "{4E67694A-952A-4C66-9785-FFD1909EA7DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{B624EF70-6E38-4F14-B708-CBF3B7696948}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B624EF70-6E38-4F14-B708-CBF3B7696948}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B624EF70-6E38-4F14-B708-CBF3B7696948}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E67694A-952A-4C66-9785-FFD1909EA7DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E67694A-952A-4C66-9785-FFD1909EA7DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E67694A-952A-4C66-9785-FFD1909EA7DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E67694A-952A-4C66-9785-FFD1909EA7DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
