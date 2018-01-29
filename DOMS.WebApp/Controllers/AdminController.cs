@@ -14,12 +14,16 @@ namespace DOMS.WebApp.Controllers
         private readonly ILogger<AdminController> _logger;
         private readonly IBrandService _brandService;
         private readonly ICountryService _countryService;
+        private readonly IFamilyService _familyService;
+        private readonly ICatalogueService _catalogueService;
 
-        public AdminController(ILogger<AdminController> logger, IBrandService brandService, ICountryService countryService)
+        public AdminController(ILogger<AdminController> logger, IBrandService brandService, ICountryService countryService, IFamilyService familyService, ICatalogueService catalogueService)
         {
             _logger = logger;
             _brandService = brandService;
             _countryService = countryService;
+            _familyService = familyService;
+            _catalogueService = catalogueService;
         }
 
         public IActionResult Brands()
@@ -45,6 +49,16 @@ namespace DOMS.WebApp.Controllers
             _brandService.AddBrand(brand);
             
             return RedirectToAction("Brands");
+        }
+
+        public IActionResult Families()
+        {
+            return View(_familyService.GetFamilies());
+        }
+
+        public IActionResult Catalogues()
+        {
+            return View(_catalogueService.GetCatalogues());
         }
     }
 }

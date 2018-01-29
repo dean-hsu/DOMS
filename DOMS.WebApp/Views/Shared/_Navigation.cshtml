@@ -25,7 +25,8 @@
                 <a href="@Url.Action("Brands", "Admin")"><i class="fa fa-angellist"></i> <span class="nav-label" data-i18n="nav.models">Admin</span> <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse @Html.IsSelected(controller: "Admin", cssClass: "in")">
                     <li class="@Html.IsSelected(action: "Brands")"><a href="@Url.Action("Brands", "Admin")">Brands</a></li>
-                    <li class="@Html.IsSelected(action: "Create")"><a href="@Url.Action("Create", "Order")">New Order</a></li>
+                    <li class="@Html.IsSelected(action: "Families")"><a href="@Url.Action("Families", "Admin")">Families</a></li>
+                    <li class="@Html.IsSelected(action: "Catalogues")"><a href="@Url.Action("Catalogues", "Admin")">Catalogues</a></li>
                 </ul>
             </li>
             <li class="@Html.IsSelected(controller: "Order")">

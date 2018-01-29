@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using DOMS.Interface.Repository;
 using DOMS.Interface.Service;
+using DOMS.Model.DbModels;
 using Microsoft.Extensions.Logging;
 
 namespace DOMS.Service
@@ -16,6 +17,16 @@ namespace DOMS.Service
         {
             _logger = logger;
             _catalogueRepository = catalogueRepository;
+        }
+
+        public IList<Catalogue> GetCatalogues()
+        {
+            return _catalogueRepository.GetCatalogues();
+        }
+
+        public bool AddCatalogue(Catalogue catalogue)
+        {
+            return _catalogueRepository.CreateCatalogue(catalogue);
         }
     }
 }
