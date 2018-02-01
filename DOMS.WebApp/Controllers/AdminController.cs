@@ -56,9 +56,47 @@ namespace DOMS.WebApp.Controllers
             return View(_familyService.GetFamilies());
         }
 
+        public IActionResult CreateFamily()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult CreateFamily(Family family)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
+            _familyService.AddFamily(family);
+
+            return RedirectToAction("Families");
+        }
+
         public IActionResult Catalogues()
         {
             return View(_catalogueService.GetCatalogues());
+        }
+
+        public IActionResult CreateCatalogue()
+        {
+            ViewBag.Families = _familyService.GetFamilies();
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult CreateCatalogue(Catalogue catalogue)
+        {
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Families = _familyService.GetFamilies();
+                return View();
+            }
+
+            _catalogueService.AddCatalogue(catalogue);
+
+            return RedirectToAction("Catalogues");
         }
     }
 }

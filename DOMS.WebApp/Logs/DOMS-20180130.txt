@@ -9,3 +9,417 @@
 2018-01-30T00:23:52.1043597+11:00 0HLB73E3G0JGF:00000002 [INF] Executing ViewResult, running view at path "/Views/Account/Login.cshtml". (9707eebe)
 2018-01-30T00:23:52.4937999+11:00 0HLB73E3G0JGF:00000002 [INF] Executed action "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" in 4735.6702ms (afa2e885)
 2018-01-30T00:23:52.5106935+11:00 0HLB73E3G0JGF:00000002 [INF] Request finished in 4815.4289ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-30T00:24:32.6700501+11:00 0HLB73E3G0JGF:00000003 [INF] Request starting HTTP/1.1 POST http://localhost:44388/Account/Login application/x-www-form-urlencoded 246 (ca22a1cb)
+2018-01-30T00:24:32.9563323+11:00 0HLB73E3G0JGF:00000003 [INF] Executing action method "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" with arguments (["DOMS.Model.ViewModels.AccountViewModels.LoginViewModel", ""]) - ModelState is Valid (ba7f4ac2)
+2018-01-30T00:24:34.6383366+11:00 0HLB73E3G0JGF:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-30T00:24:35.3968366+11:00 0HLB73E3G0JGF:00000003 [INF] Executed DbCommand ("82"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-01-30T00:24:35.8242472+11:00 0HLB73E3G0JGF:00000003 [INF] Executed DbCommand ("5"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-01-30T00:24:36.0386621+11:00 0HLB73E3G0JGF:00000003 [INF] Executed DbCommand ("7"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-01-30T00:24:36.1141692+11:00 0HLB73E3G0JGF:00000003 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2018-01-30T00:24:36.1248753+11:00 0HLB73E3G0JGF:00000003 [INF] User logged in. (fdce0db4)
+2018-01-30T00:24:36.1418674+11:00 0HLB73E3G0JGF:00000003 [INF] Executing RedirectResult, redirecting to "/Home/Dashboard". (d98d540e)
+2018-01-30T00:24:36.1518637+11:00 0HLB73E3G0JGF:00000003 [INF] Executed action "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" in 3433.6759ms (afa2e885)
+2018-01-30T00:24:36.1706903+11:00 0HLB73E3G0JGF:00000003 [INF] Request finished in 3518.9426ms 302  (791a596a)
+2018-01-30T00:24:36.1908669+11:00 0HLB73E3G0JGF:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Home/Dashboard   (ca22a1cb)
+2018-01-30T00:24:36.2512973+11:00 0HLB73E3G0JGF:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-30T00:24:36.2796718+11:00 0HLB73E3G0JGF:00000004 [INF] Executing action method "DOMS.WebApp.Controllers.HomeController.Dashboard (DOMS.WebApp)" with arguments ([""]) - ModelState is Valid (ba7f4ac2)
+2018-01-30T00:24:36.4747575+11:00 0HLB73E3G0JGF:00000004 [INF] Executing ViewResult, running view at path "/Views/Home/Dashboard.cshtml". (9707eebe)
+2018-01-30T00:24:37.2525780+11:00 0HLB73E3G0JGF:00000004 [INF] Executed action "DOMS.WebApp.Controllers.HomeController.Dashboard (DOMS.WebApp)" in 988.3488ms (afa2e885)
+2018-01-30T00:24:37.2631353+11:00 0HLB73E3G0JGF:00000004 [INF] Request finished in 1077.1671ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-30T00:24:39.3922795+11:00 0HLB73E3G0JGF:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Admin/Brands   (ca22a1cb)
+2018-01-30T00:24:39.4030129+11:00 0HLB73E3G0JGF:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-30T00:24:39.4228273+11:00 0HLB73E3G0JGF:00000005 [INF] Executing action method "DOMS.WebApp.Controllers.AdminController.Brands (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-30T00:24:39.4440118+11:00 0HLB73E3G0JGF:00000005 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-30T00:24:39.5398732+11:00 0HLB73E3G0JGF:00000005 [INF] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[BrandId], [x].[BrandDescription], [x].[BrandLogo], [x].[BrandName], [x].[CountryId], [x].[CreatedTime], [x].[Deleted], [x].[DeletedTime], [x].[UpdatedTime]
+FROM [DOMS_Brand] AS [x]
+WHERE [x].[Deleted] = 0" (0723d8ff)
+2018-01-30T00:24:40.1441271+11:00 0HLB73E3G0JGF:00000005 [INF] Executing ViewResult, running view at path "/Views/Admin/Brands.cshtml". (9707eebe)
+2018-01-30T00:24:40.2529692+11:00 0HLB73E3G0JGF:00000005 [INF] Executed action "DOMS.WebApp.Controllers.AdminController.Brands (DOMS.WebApp)" in 815.1223ms (afa2e885)
+2018-01-30T00:24:40.2598018+11:00 0HLB73E3G0JGF:00000005 [INF] Request finished in 872.993ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-30T00:24:41.9499533+11:00 0HLB73E3G0JGF:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Admin/Families   (ca22a1cb)
+2018-01-30T00:24:41.9665210+11:00 0HLB73E3G0JGF:00000006 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-30T00:24:41.9891470+11:00 0HLB73E3G0JGF:00000006 [INF] Executing action method "DOMS.WebApp.Controllers.AdminController.Families (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-30T00:24:42.0095634+11:00 0HLB73E3G0JGF:00000006 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-30T00:24:42.0440895+11:00 0HLB73E3G0JGF:00000006 [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [d].[FamilyId], [d].[Memo], [d].[Name]
+FROM [DOMS_Family] AS [d]" (0723d8ff)
+2018-01-30T00:24:42.4435250+11:00 0HLB73E3G0JGF:00000006 [INF] Executing ViewResult, running view at path "/Views/Admin/Families.cshtml". (9707eebe)
+2018-01-30T00:24:42.5042737+11:00 0HLB73E3G0JGF:00000006 [INF] Executed action "DOMS.WebApp.Controllers.AdminController.Families (DOMS.WebApp)" in 499.4486ms (afa2e885)
+2018-01-30T00:24:42.5137083+11:00 0HLB73E3G0JGF:00000006 [INF] Request finished in 570.1466ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-30T00:24:44.4821404+11:00 0HLB73E3G0JGF:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Admin/Catalogues   (ca22a1cb)
+2018-01-30T00:24:44.4927372+11:00 0HLB73E3G0JGF:00000007 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-30T00:24:44.5085913+11:00 0HLB73E3G0JGF:00000007 [INF] Executing action method "DOMS.WebApp.Controllers.AdminController.Catalogues (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-30T00:24:44.5213985+11:00 0HLB73E3G0JGF:00000007 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-30T00:24:44.5497573+11:00 0HLB73E3G0JGF:00000007 [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [d].[CatalogueId], [d].[FamilyId], [d].[Memo], [d].[Name]
+FROM [DOMS_Catalogue] AS [d]" (0723d8ff)
+2018-01-30T00:24:44.7608646+11:00 0HLB73E3G0JGF:00000007 [INF] Executing ViewResult, running view at path "/Views/Admin/Catalogues.cshtml". (9707eebe)
+2018-01-30T00:24:44.8350522+11:00 0HLB73E3G0JGF:00000007 [INF] Executed action "DOMS.WebApp.Controllers.AdminController.Catalogues (DOMS.WebApp)" in 287.4559ms (afa2e885)
+2018-01-30T00:24:44.8486926+11:00 0HLB73E3G0JGF:00000007 [INF] Request finished in 371.0763ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-30T00:24:48.3474150+11:00 0HLB73E3G0JGF:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Admin/Families   (ca22a1cb)
+2018-01-30T00:24:48.3659514+11:00 0HLB73E3G0JGF:00000008 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-30T00:24:48.3810202+11:00 0HLB73E3G0JGF:00000008 [INF] Executing action method "DOMS.WebApp.Controllers.AdminController.Families (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-30T00:24:48.3954065+11:00 0HLB73E3G0JGF:00000008 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-30T00:24:48.4372463+11:00 0HLB73E3G0JGF:00000008 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [d].[FamilyId], [d].[Memo], [d].[Name]
+FROM [DOMS_Family] AS [d]" (0723d8ff)
+2018-01-30T00:24:48.4510118+11:00 0HLB73E3G0JGF:00000008 [INF] Executing ViewResult, running view at path "/Views/Admin/Families.cshtml". (9707eebe)
+2018-01-30T00:24:48.5144806+11:00 0HLB73E3G0JGF:00000008 [INF] Executed action "DOMS.WebApp.Controllers.AdminController.Families (DOMS.WebApp)" in 87.9835ms (afa2e885)
+2018-01-30T00:24:48.5259322+11:00 0HLB73E3G0JGF:00000008 [INF] Request finished in 187.5293ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-30T00:24:49.9556034+11:00 0HLB73E3G0JGF:00000009 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Admin/Brands   (ca22a1cb)
+2018-01-30T00:24:49.9886322+11:00 0HLB73E3G0JGF:00000009 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-30T00:24:49.9990061+11:00 0HLB73E3G0JGF:00000009 [INF] Executing action method "DOMS.WebApp.Controllers.AdminController.Brands (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-30T00:24:50.0095382+11:00 0HLB73E3G0JGF:00000009 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-30T00:24:50.0296314+11:00 0HLB73E3G0JGF:00000009 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[BrandId], [x].[BrandDescription], [x].[BrandLogo], [x].[BrandName], [x].[CountryId], [x].[CreatedTime], [x].[Deleted], [x].[DeletedTime], [x].[UpdatedTime]
+FROM [DOMS_Brand] AS [x]
+WHERE [x].[Deleted] = 0" (0723d8ff)
+2018-01-30T00:24:50.0400141+11:00 0HLB73E3G0JGF:00000009 [INF] Executing ViewResult, running view at path "/Views/Admin/Brands.cshtml". (9707eebe)
+2018-01-30T00:24:50.0633215+11:00 0HLB73E3G0JGF:00000009 [INF] Executed action "DOMS.WebApp.Controllers.AdminController.Brands (DOMS.WebApp)" in 64.2975ms (afa2e885)
+2018-01-30T00:24:50.0738180+11:00 0HLB73E3G0JGF:00000009 [INF] Request finished in 126.3144ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-30T23:17:09.6830405+11:00 0HLB7RDHBS0K6:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44388/   (ca22a1cb)
+2018-01-30T23:17:10.0379013+11:00 0HLB7RDHBS0K6:00000001 [INF] Executing action method "DOMS.WebApp.Controllers.HomeController.Index (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-30T23:17:10.0776559+11:00 0HLB7RDHBS0K6:00000001 [INF] Executing RedirectResult, redirecting to "/Account/Login". (d98d540e)
+2018-01-30T23:17:10.1077620+11:00 0HLB7RDHBS0K6:00000001 [INF] Executed action "DOMS.WebApp.Controllers.HomeController.Index (DOMS.WebApp)" in 63.9186ms (afa2e885)
+2018-01-30T23:17:10.1524878+11:00 0HLB7RDHBS0K6:00000001 [INF] Request finished in 503.2412ms 302  (791a596a)
+2018-01-30T23:17:10.1877396+11:00 0HLB7RDHBS0K6:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Account/Login   (ca22a1cb)
+2018-01-30T23:17:10.4828685+11:00 0HLB7RDHBS0K6:00000002 [INF] Executing action method "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" with arguments ([""]) - ModelState is Valid (ba7f4ac2)
+2018-01-30T23:17:10.5506639+11:00 0HLB7RDHBS0K6:00000002 [INF] AuthenticationScheme: "Identity.External" signed out. (d3f50c8d)
+2018-01-30T23:17:18.0072195+11:00 0HLB7RDHBS0K6:00000002 [INF] Executing ViewResult, running view at path "/Views/Account/Login.cshtml". (9707eebe)
+2018-01-30T23:17:18.3933261+11:00 0HLB7RDHBS0K6:00000002 [INF] Executed action "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" in 8154.3618ms (afa2e885)
+2018-01-30T23:17:18.4191232+11:00 0HLB7RDHBS0K6:00000002 [INF] Request finished in 8242.5859ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-30T23:17:18.4422782+11:00 0HLB7RDHBS0K6:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44388/css/style.css   (ca22a1cb)
+2018-01-30T23:17:18.4738306+11:00 0HLB7RDHBS0K6:00000003 [INF] The file "/css/style.css" was not modified (f1f8d725)
+2018-01-30T23:17:18.4900562+11:00 0HLB7RDHBS0K6:00000003 [INF] Request finished in 51.9032ms 304 text/css (791a596a)
+2018-01-30T23:17:20.5679953+11:00 0HLB7RDHBS0K6:00000004 [INF] Request starting HTTP/1.1 POST http://localhost:44388/Account/Login application/x-www-form-urlencoded 246 (ca22a1cb)
+2018-01-30T23:17:20.7765624+11:00 0HLB7RDHBS0K6:00000004 [INF] Executing action method "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" with arguments (["DOMS.Model.ViewModels.AccountViewModels.LoginViewModel", ""]) - ModelState is Valid (ba7f4ac2)
+2018-01-30T23:17:22.8857288+11:00 0HLB7RDHBS0K6:00000004 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-30T23:17:24.0750359+11:00 0HLB7RDHBS0K6:00000004 [INF] Executed DbCommand ("125"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-01-30T23:17:24.6531908+11:00 0HLB7RDHBS0K6:00000004 [INF] Executed DbCommand ("9"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-01-30T23:17:24.9099090+11:00 0HLB7RDHBS0K6:00000004 [INF] Executed DbCommand ("9"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-01-30T23:17:25.0081404+11:00 0HLB7RDHBS0K6:00000004 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2018-01-30T23:17:25.0272234+11:00 0HLB7RDHBS0K6:00000004 [INF] User logged in. (fdce0db4)
+2018-01-30T23:17:25.0494856+11:00 0HLB7RDHBS0K6:00000004 [INF] Executing RedirectResult, redirecting to "/Home/Dashboard". (d98d540e)
+2018-01-30T23:17:25.0631485+11:00 0HLB7RDHBS0K6:00000004 [INF] Executed action "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" in 4450.5222ms (afa2e885)
+2018-01-30T23:17:25.0930310+11:00 0HLB7RDHBS0K6:00000004 [INF] Request finished in 4525.6065ms 302  (791a596a)
+2018-01-30T23:17:25.1108910+11:00 0HLB7RDHBS0K6:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Home/Dashboard   (ca22a1cb)
+2018-01-30T23:17:25.1609710+11:00 0HLB7RDHBS0K6:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-30T23:17:25.1773550+11:00 0HLB7RDHBS0K6:00000005 [INF] Executing action method "DOMS.WebApp.Controllers.HomeController.Dashboard (DOMS.WebApp)" with arguments ([""]) - ModelState is Valid (ba7f4ac2)
+2018-01-30T23:17:25.4327461+11:00 0HLB7RDHBS0K6:00000005 [INF] Executing ViewResult, running view at path "/Views/Home/Dashboard.cshtml". (9707eebe)
+2018-01-30T23:17:26.8067523+11:00 0HLB7RDHBS0K6:00000005 [INF] Executed action "DOMS.WebApp.Controllers.HomeController.Dashboard (DOMS.WebApp)" in 1622.0396ms (afa2e885)
+2018-01-30T23:17:26.8319885+11:00 0HLB7RDHBS0K6:00000005 [INF] Request finished in 1705.854ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-30T23:17:29.4483808+11:00 0HLB7RDHBS0K6:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Admin/Brands   (ca22a1cb)
+2018-01-30T23:17:29.4626740+11:00 0HLB7RDHBS0K6:00000006 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-30T23:17:29.4804230+11:00 0HLB7RDHBS0K6:00000006 [INF] Executing action method "DOMS.WebApp.Controllers.AdminController.Brands (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-30T23:17:29.4962523+11:00 0HLB7RDHBS0K6:00000006 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-30T23:17:29.5829433+11:00 0HLB7RDHBS0K6:00000006 [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[BrandId], [x].[BrandDescription], [x].[BrandLogo], [x].[BrandName], [x].[CountryId], [x].[CreatedTime], [x].[Deleted], [x].[DeletedTime], [x].[UpdatedTime]
+FROM [DOMS_Brand] AS [x]
+WHERE [x].[Deleted] = 0" (0723d8ff)
+2018-01-30T23:17:30.3109161+11:00 0HLB7RDHBS0K6:00000006 [INF] Executing ViewResult, running view at path "/Views/Admin/Brands.cshtml". (9707eebe)
+2018-01-30T23:17:30.3704559+11:00 0HLB7RDHBS0K6:00000006 [INF] Executed action "DOMS.WebApp.Controllers.AdminController.Brands (DOMS.WebApp)" in 896.1922ms (afa2e885)
+2018-01-30T23:17:30.3781620+11:00 0HLB7RDHBS0K6:00000006 [INF] Request finished in 946.5393ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-30T23:17:31.9773113+11:00 0HLB7RDHBS0K6:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Admin/Brands   (ca22a1cb)
+2018-01-30T23:17:31.9967918+11:00 0HLB7RDHBS0K6:00000007 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-30T23:17:32.0194021+11:00 0HLB7RDHBS0K6:00000007 [INF] Executing action method "DOMS.WebApp.Controllers.AdminController.Brands (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-30T23:17:32.0357849+11:00 0HLB7RDHBS0K6:00000007 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-30T23:17:32.0684510+11:00 0HLB7RDHBS0K6:00000007 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[BrandId], [x].[BrandDescription], [x].[BrandLogo], [x].[BrandName], [x].[CountryId], [x].[CreatedTime], [x].[Deleted], [x].[DeletedTime], [x].[UpdatedTime]
+FROM [DOMS_Brand] AS [x]
+WHERE [x].[Deleted] = 0" (0723d8ff)
+2018-01-30T23:17:32.0782481+11:00 0HLB7RDHBS0K6:00000007 [INF] Executing ViewResult, running view at path "/Views/Admin/Brands.cshtml". (9707eebe)
+2018-01-30T23:17:32.1053608+11:00 0HLB7RDHBS0K6:00000007 [INF] Executed action "DOMS.WebApp.Controllers.AdminController.Brands (DOMS.WebApp)" in 93.4136ms (afa2e885)
+2018-01-30T23:17:32.1243179+11:00 0HLB7RDHBS0K6:00000007 [INF] Request finished in 148.5374ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-30T23:17:35.8590577+11:00 0HLB7RDHBS0K6:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Admin/Families   (ca22a1cb)
+2018-01-30T23:17:35.8773259+11:00 0HLB7RDHBS0K6:00000008 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-30T23:17:35.8993233+11:00 0HLB7RDHBS0K6:00000008 [INF] Executing action method "DOMS.WebApp.Controllers.AdminController.Families (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-30T23:17:35.9208190+11:00 0HLB7RDHBS0K6:00000008 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-30T23:17:35.9537885+11:00 0HLB7RDHBS0K6:00000008 [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [d].[FamilyId], [d].[Memo], [d].[Name]
+FROM [DOMS_Family] AS [d]" (0723d8ff)
+2018-01-30T23:17:36.2981350+11:00 0HLB7RDHBS0K6:00000008 [INF] Executing ViewResult, running view at path "/Views/Admin/Families.cshtml". (9707eebe)
+2018-01-30T23:17:36.3304093+11:00 0HLB7RDHBS0K6:00000008 [INF] Executed action "DOMS.WebApp.Controllers.AdminController.Families (DOMS.WebApp)" in 438.1674ms (afa2e885)
+2018-01-30T23:17:36.3397284+11:00 0HLB7RDHBS0K6:00000008 [INF] Request finished in 491.9891ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-30T23:17:42.1429917+11:00 0HLB7RDHBS0K6:00000009 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Admin/Create   (ca22a1cb)
+2018-01-30T23:17:42.1501755+11:00 0HLB7RDHBS0K6:00000009 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-30T23:17:42.1578318+11:00 0HLB7RDHBS0K6:00000009 [INF] Request finished in 14.5714ms 404  (791a596a)
+2018-01-30T23:24:32.4545224+11:00 0HLB7RHLA7FPS:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44388/   (ca22a1cb)
+2018-01-30T23:24:32.7886064+11:00 0HLB7RHLA7FPS:00000001 [INF] Executing action method "DOMS.WebApp.Controllers.HomeController.Index (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-30T23:24:32.8315800+11:00 0HLB7RHLA7FPS:00000001 [INF] Executing RedirectResult, redirecting to "/Account/Login". (d98d540e)
+2018-01-30T23:24:32.8656529+11:00 0HLB7RHLA7FPS:00000001 [INF] Executed action "DOMS.WebApp.Controllers.HomeController.Index (DOMS.WebApp)" in 86.1768ms (afa2e885)
+2018-01-30T23:24:32.9453014+11:00 0HLB7RHLA7FPS:00000001 [INF] Request finished in 525.8352ms 302  (791a596a)
+2018-01-30T23:24:32.9930719+11:00 0HLB7RHLA7FPS:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Account/Login   (ca22a1cb)
+2018-01-30T23:24:33.3979794+11:00 0HLB7RHLA7FPS:00000002 [INF] Executing action method "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" with arguments ([""]) - ModelState is Valid (ba7f4ac2)
+2018-01-30T23:24:33.5164926+11:00 0HLB7RHLA7FPS:00000002 [INF] AuthenticationScheme: "Identity.External" signed out. (d3f50c8d)
+2018-01-30T23:24:39.9517710+11:00 0HLB7RHLA7FPS:00000002 [INF] Executing ViewResult, running view at path "/Views/Account/Login.cshtml". (9707eebe)
+2018-01-30T23:24:40.2748315+11:00 0HLB7RHLA7FPS:00000002 [INF] Executed action "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" in 7223.4017ms (afa2e885)
+2018-01-30T23:24:40.2917215+11:00 0HLB7RHLA7FPS:00000002 [INF] Request finished in 7313.929ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-30T23:25:20.2643572+11:00 0HLB7RHLA7FPS:00000003 [INF] Request starting HTTP/1.1 POST http://localhost:44388/Account/Login application/x-www-form-urlencoded 246 (ca22a1cb)
+2018-01-30T23:25:20.4030145+11:00 0HLB7RHLA7FPS:00000003 [INF] Executing action method "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" with arguments (["DOMS.Model.ViewModels.AccountViewModels.LoginViewModel", ""]) - ModelState is Valid (ba7f4ac2)
+2018-01-30T23:25:21.5484282+11:00 0HLB7RHLA7FPS:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-30T23:25:22.2572034+11:00 0HLB7RHLA7FPS:00000003 [INF] Executed DbCommand ("65"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-01-30T23:25:22.6907956+11:00 0HLB7RHLA7FPS:00000003 [INF] Executed DbCommand ("4"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-01-30T23:25:22.7825971+11:00 0HLB7RHLA7FPS:00000003 [INF] Executed DbCommand ("3"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-01-30T23:25:22.8108902+11:00 0HLB7RHLA7FPS:00000003 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2018-01-30T23:25:22.8186326+11:00 0HLB7RHLA7FPS:00000003 [INF] User logged in. (fdce0db4)
+2018-01-30T23:25:22.8282153+11:00 0HLB7RHLA7FPS:00000003 [INF] Executing RedirectResult, redirecting to "/Home/Dashboard". (d98d540e)
+2018-01-30T23:25:22.8335920+11:00 0HLB7RHLA7FPS:00000003 [INF] Executed action "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" in 2544.2171ms (afa2e885)
+2018-01-30T23:25:22.8418102+11:00 0HLB7RHLA7FPS:00000003 [INF] Request finished in 2588.0627ms 302  (791a596a)
+2018-01-30T23:25:22.8587034+11:00 0HLB7RHLA7FPS:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Home/Dashboard   (ca22a1cb)
+2018-01-30T23:25:22.8995430+11:00 0HLB7RHLA7FPS:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-30T23:25:22.9097680+11:00 0HLB7RHLA7FPS:00000004 [INF] Executing action method "DOMS.WebApp.Controllers.HomeController.Dashboard (DOMS.WebApp)" with arguments ([""]) - ModelState is Valid (ba7f4ac2)
+2018-01-30T23:25:23.0819945+11:00 0HLB7RHLA7FPS:00000004 [INF] Executing ViewResult, running view at path "/Views/Home/Dashboard.cshtml". (9707eebe)
+2018-01-30T23:25:23.7758043+11:00 0HLB7RHLA7FPS:00000004 [INF] Executed action "DOMS.WebApp.Controllers.HomeController.Dashboard (DOMS.WebApp)" in 861.2786ms (afa2e885)
+2018-01-30T23:25:23.8070008+11:00 0HLB7RHLA7FPS:00000004 [INF] Request finished in 922.9198ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-30T23:25:26.1515227+11:00 0HLB7RHLA7FPS:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Admin/Brands   (ca22a1cb)
+2018-01-30T23:25:26.1603354+11:00 0HLB7RHLA7FPS:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-30T23:25:26.1730220+11:00 0HLB7RHLA7FPS:00000005 [INF] Executing action method "DOMS.WebApp.Controllers.AdminController.Brands (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-30T23:25:26.1847292+11:00 0HLB7RHLA7FPS:00000005 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-30T23:25:26.2344044+11:00 0HLB7RHLA7FPS:00000005 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[BrandId], [x].[BrandDescription], [x].[BrandLogo], [x].[BrandName], [x].[CountryId], [x].[CreatedTime], [x].[Deleted], [x].[DeletedTime], [x].[UpdatedTime]
+FROM [DOMS_Brand] AS [x]
+WHERE [x].[Deleted] = 0" (0723d8ff)
+2018-01-30T23:25:26.6020959+11:00 0HLB7RHLA7FPS:00000005 [INF] Executing ViewResult, running view at path "/Views/Admin/Brands.cshtml". (9707eebe)
+2018-01-30T23:25:26.6552914+11:00 0HLB7RHLA7FPS:00000005 [INF] Executed action "DOMS.WebApp.Controllers.AdminController.Brands (DOMS.WebApp)" in 486.5431ms (afa2e885)
+2018-01-30T23:25:26.6611834+11:00 0HLB7RHLA7FPS:00000005 [INF] Request finished in 511.1745ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-30T23:25:30.3663049+11:00 0HLB7RHLA7FPS:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Admin/Families   (ca22a1cb)
+2018-01-30T23:25:30.3840571+11:00 0HLB7RHLA7FPS:00000006 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-30T23:25:30.4023568+11:00 0HLB7RHLA7FPS:00000006 [INF] Executing action method "DOMS.WebApp.Controllers.AdminController.Families (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-30T23:25:30.4160931+11:00 0HLB7RHLA7FPS:00000006 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-30T23:25:30.4353946+11:00 0HLB7RHLA7FPS:00000006 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [d].[FamilyId], [d].[Memo], [d].[Name]
+FROM [DOMS_Family] AS [d]" (0723d8ff)
+2018-01-30T23:25:30.6922112+11:00 0HLB7RHLA7FPS:00000006 [INF] Executing ViewResult, running view at path "/Views/Admin/Families.cshtml". (9707eebe)
+2018-01-30T23:25:30.7382213+11:00 0HLB7RHLA7FPS:00000006 [INF] Executed action "DOMS.WebApp.Controllers.AdminController.Families (DOMS.WebApp)" in 334.8053ms (afa2e885)
+2018-01-30T23:25:30.7620806+11:00 0HLB7RHLA7FPS:00000006 [INF] Request finished in 390.389ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-30T23:25:32.9583539+11:00 0HLB7RHLA7FPS:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Admin/CreateFamily   (ca22a1cb)
+2018-01-30T23:25:32.9766156+11:00 0HLB7RHLA7FPS:00000007 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-30T23:25:32.9959452+11:00 0HLB7RHLA7FPS:00000007 [INF] Executing action method "DOMS.WebApp.Controllers.AdminController.CreateFamily (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-30T23:25:33.2319772+11:00 0HLB7RHLA7FPS:00000007 [INF] Executing ViewResult, running view at path "/Views/Admin/CreateFamily.cshtml". (9707eebe)
+2018-01-30T23:25:33.2625502+11:00 0HLB7RHLA7FPS:00000007 [INF] Executed action "DOMS.WebApp.Controllers.AdminController.CreateFamily (DOMS.WebApp)" in 274.0909ms (afa2e885)
+2018-01-30T23:25:33.2690107+11:00 0HLB7RHLA7FPS:00000007 [INF] Request finished in 322.3525ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-30T23:40:07.7953824+11:00 0HLB7RHLA7FPU:00000001 [INF] Request starting HTTP/1.1 POST http://localhost:44388/Admin/CreateFamily application/x-www-form-urlencoded 263 (ca22a1cb)
+2018-01-30T23:40:07.8232647+11:00 0HLB7RHLA7FPU:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-30T23:40:07.8658765+11:00 0HLB7RHLA7FPU:00000001 [INF] Executing action method "DOMS.WebApp.Controllers.AdminController.CreateFamily (DOMS.WebApp)" with arguments (["DOMS.Model.DbModels.Family"]) - ModelState is Valid (ba7f4ac2)
+2018-01-30T23:40:07.9073158+11:00 0HLB7RHLA7FPU:00000001 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-30T23:40:08.3747585+11:00 0HLB7RHLA7FPU:00000001 [INF] Executed DbCommand ("17"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [DOMS_Family] ([Memo], [Name])
+VALUES (@p0, @p1);
+SELECT [FamilyId]
+FROM [DOMS_Family]
+WHERE @@ROWCOUNT = 1 AND [FamilyId] = scope_identity();" (0723d8ff)
+2018-01-30T23:40:08.4331574+11:00 0HLB7RHLA7FPU:00000001 [INF] Executing RedirectResult, redirecting to "/Admin/Families". (d98d540e)
+2018-01-30T23:40:08.4462545+11:00 0HLB7RHLA7FPU:00000001 [INF] Executed action "DOMS.WebApp.Controllers.AdminController.CreateFamily (DOMS.WebApp)" in 601.6655ms (afa2e885)
+2018-01-30T23:40:08.4628246+11:00 0HLB7RHLA7FPU:00000001 [INF] Request finished in 658.5275ms 302  (791a596a)
+2018-01-30T23:40:08.4829858+11:00 0HLB7RHLA7FPU:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Admin/Families   (ca22a1cb)
+2018-01-30T23:40:08.4919272+11:00 0HLB7RHLA7FPU:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-30T23:40:08.5010362+11:00 0HLB7RHLA7FPU:00000002 [INF] Executing action method "DOMS.WebApp.Controllers.AdminController.Families (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-30T23:40:08.5299026+11:00 0HLB7RHLA7FPU:00000002 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-30T23:40:08.5640767+11:00 0HLB7RHLA7FPU:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [d].[FamilyId], [d].[Memo], [d].[Name]
+FROM [DOMS_Family] AS [d]" (0723d8ff)
+2018-01-30T23:40:08.5926594+11:00 0HLB7RHLA7FPU:00000002 [INF] Executing ViewResult, running view at path "/Views/Admin/Families.cshtml". (9707eebe)
+2018-01-30T23:40:08.6321870+11:00 0HLB7RHLA7FPU:00000002 [INF] Executed action "DOMS.WebApp.Controllers.AdminController.Families (DOMS.WebApp)" in 109.463ms (afa2e885)
+2018-01-30T23:40:08.6444441+11:00 0HLB7RHLA7FPU:00000002 [INF] Request finished in 162.25ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-30T23:40:15.7016401+11:00 0HLB7RHLA7FPU:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Admin/CreateFamily   (ca22a1cb)
+2018-01-30T23:40:15.7376990+11:00 0HLB7RHLA7FPU:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-30T23:40:15.7719821+11:00 0HLB7RHLA7FPU:00000003 [INF] Executing action method "DOMS.WebApp.Controllers.AdminController.CreateFamily (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-30T23:40:15.7890575+11:00 0HLB7RHLA7FPU:00000003 [INF] Executing ViewResult, running view at path "/Views/Admin/CreateFamily.cshtml". (9707eebe)
+2018-01-30T23:40:15.8134261+11:00 0HLB7RHLA7FPU:00000003 [INF] Executed action "DOMS.WebApp.Controllers.AdminController.CreateFamily (DOMS.WebApp)" in 59.0985ms (afa2e885)
+2018-01-30T23:40:15.8307990+11:00 0HLB7RHLA7FPU:00000003 [INF] Request finished in 126.6312ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-30T23:40:25.8938220+11:00 0HLB7RHLA7FPU:00000004 [INF] Request starting HTTP/1.1 POST http://localhost:44388/Admin/CreateFamily application/x-www-form-urlencoded 254 (ca22a1cb)
+2018-01-30T23:40:25.9117358+11:00 0HLB7RHLA7FPU:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-30T23:40:25.9291465+11:00 0HLB7RHLA7FPU:00000004 [INF] Executing action method "DOMS.WebApp.Controllers.AdminController.CreateFamily (DOMS.WebApp)" with arguments (["DOMS.Model.DbModels.Family"]) - ModelState is Valid (ba7f4ac2)
+2018-01-30T23:40:25.9456877+11:00 0HLB7RHLA7FPU:00000004 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-30T23:40:25.9860307+11:00 0HLB7RHLA7FPU:00000004 [INF] Executed DbCommand ("1"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [DOMS_Family] ([Memo], [Name])
+VALUES (@p0, @p1);
+SELECT [FamilyId]
+FROM [DOMS_Family]
+WHERE @@ROWCOUNT = 1 AND [FamilyId] = scope_identity();" (0723d8ff)
+2018-01-30T23:40:26.0175710+11:00 0HLB7RHLA7FPU:00000004 [INF] Executing RedirectResult, redirecting to "/Admin/Families". (d98d540e)
+2018-01-30T23:40:26.0475155+11:00 0HLB7RHLA7FPU:00000004 [INF] Executed action "DOMS.WebApp.Controllers.AdminController.CreateFamily (DOMS.WebApp)" in 105.4021ms (afa2e885)
+2018-01-30T23:40:26.0628909+11:00 0HLB7RHLA7FPU:00000004 [INF] Request finished in 171.1362ms 302  (791a596a)
+2018-01-30T23:40:26.0849824+11:00 0HLB7RHLA7FPU:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Admin/Families   (ca22a1cb)
+2018-01-30T23:40:26.1180969+11:00 0HLB7RHLA7FPU:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-30T23:40:26.1512095+11:00 0HLB7RHLA7FPU:00000005 [INF] Executing action method "DOMS.WebApp.Controllers.AdminController.Families (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-30T23:40:26.1853353+11:00 0HLB7RHLA7FPU:00000005 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-30T23:40:26.2178742+11:00 0HLB7RHLA7FPU:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [d].[FamilyId], [d].[Memo], [d].[Name]
+FROM [DOMS_Family] AS [d]" (0723d8ff)
+2018-01-30T23:40:26.2464558+11:00 0HLB7RHLA7FPU:00000005 [INF] Executing ViewResult, running view at path "/Views/Admin/Families.cshtml". (9707eebe)
+2018-01-30T23:40:26.2867414+11:00 0HLB7RHLA7FPU:00000005 [INF] Executed action "DOMS.WebApp.Controllers.AdminController.Families (DOMS.WebApp)" in 137.256ms (afa2e885)
+2018-01-30T23:40:26.2947928+11:00 0HLB7RHLA7FPU:00000005 [INF] Request finished in 216.3356ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-30T23:40:29.1839257+11:00 0HLB7RHLA7FPU:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Admin/Brands   (ca22a1cb)
+2018-01-30T23:40:29.2021744+11:00 0HLB7RHLA7FPU:00000006 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-30T23:40:29.2169241+11:00 0HLB7RHLA7FPU:00000006 [INF] Executing action method "DOMS.WebApp.Controllers.AdminController.Brands (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-30T23:40:29.2311004+11:00 0HLB7RHLA7FPU:00000006 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-30T23:40:29.2734262+11:00 0HLB7RHLA7FPU:00000006 [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[BrandId], [x].[BrandDescription], [x].[BrandLogo], [x].[BrandName], [x].[CountryId], [x].[CreatedTime], [x].[Deleted], [x].[DeletedTime], [x].[UpdatedTime]
+FROM [DOMS_Brand] AS [x]
+WHERE [x].[Deleted] = 0" (0723d8ff)
+2018-01-30T23:40:29.3022638+11:00 0HLB7RHLA7FPU:00000006 [INF] Executing ViewResult, running view at path "/Views/Admin/Brands.cshtml". (9707eebe)
+2018-01-30T23:40:29.3466072+11:00 0HLB7RHLA7FPU:00000006 [INF] Executed action "DOMS.WebApp.Controllers.AdminController.Brands (DOMS.WebApp)" in 113.397ms (afa2e885)
+2018-01-30T23:40:29.3584887+11:00 0HLB7RHLA7FPU:00000006 [INF] Request finished in 178.8316ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-30T23:40:31.3078512+11:00 0HLB7RHLA7FPU:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Admin/Families   (ca22a1cb)
+2018-01-30T23:40:31.3246342+11:00 0HLB7RHLA7FPU:00000007 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-30T23:40:31.3402151+11:00 0HLB7RHLA7FPU:00000007 [INF] Executing action method "DOMS.WebApp.Controllers.AdminController.Families (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-30T23:40:31.3553890+11:00 0HLB7RHLA7FPU:00000007 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-30T23:40:31.3706001+11:00 0HLB7RHLA7FPU:00000007 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [d].[FamilyId], [d].[Memo], [d].[Name]
+FROM [DOMS_Family] AS [d]" (0723d8ff)
+2018-01-30T23:40:31.4027416+11:00 0HLB7RHLA7FPU:00000007 [INF] Executing ViewResult, running view at path "/Views/Admin/Families.cshtml". (9707eebe)
+2018-01-30T23:40:31.4664204+11:00 0HLB7RHLA7FPU:00000007 [INF] Executed action "DOMS.WebApp.Controllers.AdminController.Families (DOMS.WebApp)" in 91.6141ms (afa2e885)
+2018-01-30T23:40:31.4816774+11:00 0HLB7RHLA7FPU:00000007 [INF] Request finished in 174.9232ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-30T23:40:37.5185521+11:00 0HLB7RHLA7FPU:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Admin/Catalogues   (ca22a1cb)
+2018-01-30T23:40:37.5341345+11:00 0HLB7RHLA7FPU:00000008 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-30T23:40:37.5717962+11:00 0HLB7RHLA7FPU:00000008 [INF] Executing action method "DOMS.WebApp.Controllers.AdminController.Catalogues (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-30T23:40:37.5830934+11:00 0HLB7RHLA7FPU:00000008 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-30T23:40:37.6040482+11:00 0HLB7RHLA7FPU:00000008 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [d].[CatalogueId], [d].[FamilyId], [d].[Memo], [d].[Name]
+FROM [DOMS_Catalogue] AS [d]" (0723d8ff)
+2018-01-30T23:40:38.0410589+11:00 0HLB7RHLA7FPU:00000008 [INF] Executing ViewResult, running view at path "/Views/Admin/Catalogues.cshtml". (9707eebe)
+2018-01-30T23:40:38.1032121+11:00 0HLB7RHLA7FPU:00000008 [INF] Executed action "DOMS.WebApp.Controllers.AdminController.Catalogues (DOMS.WebApp)" in 545.3248ms (afa2e885)
+2018-01-30T23:40:38.1304260+11:00 0HLB7RHLA7FPU:00000008 [INF] Request finished in 617.8397ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-30T23:43:48.2897364+11:00 0HLB7RHLA7FPV:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Admin/Create   (ca22a1cb)
+2018-01-30T23:43:48.3241175+11:00 0HLB7RHLA7FPV:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-30T23:43:48.3510453+11:00 0HLB7RHLA7FPV:00000001 [INF] Request finished in 56.7684ms 404  (791a596a)
+2018-01-30T23:54:32.0201621+11:00 0HLB7S2DKASMJ:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44388/   (ca22a1cb)
+2018-01-30T23:54:32.5242679+11:00 0HLB7S2DKASMJ:00000001 [INF] Executing action method "DOMS.WebApp.Controllers.HomeController.Index (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-30T23:54:32.5755239+11:00 0HLB7S2DKASMJ:00000001 [INF] Executing RedirectResult, redirecting to "/Account/Login". (d98d540e)
+2018-01-30T23:54:32.6083845+11:00 0HLB7S2DKASMJ:00000001 [INF] Executed action "DOMS.WebApp.Controllers.HomeController.Index (DOMS.WebApp)" in 93.1461ms (afa2e885)
+2018-01-30T23:54:32.6326721+11:00 0HLB7S2DKASMJ:00000001 [INF] Request finished in 689.137ms 302  (791a596a)
+2018-01-30T23:54:32.6713799+11:00 0HLB7S2DKASMJ:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Account/Login   (ca22a1cb)
+2018-01-30T23:54:32.9576756+11:00 0HLB7S2DKASMJ:00000002 [INF] Executing action method "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" with arguments ([""]) - ModelState is Valid (ba7f4ac2)
+2018-01-30T23:54:33.0168962+11:00 0HLB7S2DKASMJ:00000002 [INF] AuthenticationScheme: "Identity.External" signed out. (d3f50c8d)
+2018-01-30T23:54:39.1672185+11:00 0HLB7S2DKASMJ:00000002 [INF] Executing ViewResult, running view at path "/Views/Account/Login.cshtml". (9707eebe)
+2018-01-30T23:54:39.6266174+11:00 0HLB7S2DKASMJ:00000002 [INF] Executed action "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" in 6905.9965ms (afa2e885)
+2018-01-30T23:54:39.6496807+11:00 0HLB7S2DKASMJ:00000002 [INF] Request finished in 6988.4246ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-30T23:54:42.6835790+11:00 0HLB7S2DKASMJ:00000003 [INF] Request starting HTTP/1.1 POST http://localhost:44388/Account/Login application/x-www-form-urlencoded 246 (ca22a1cb)
+2018-01-30T23:54:42.7893988+11:00 0HLB7S2DKASMJ:00000003 [INF] Executing action method "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" with arguments (["DOMS.Model.ViewModels.AccountViewModels.LoginViewModel", ""]) - ModelState is Valid (ba7f4ac2)
+2018-01-30T23:54:43.8868085+11:00 0HLB7S2DKASMJ:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-30T23:54:45.1940069+11:00 0HLB7S2DKASMJ:00000003 [INF] Executed DbCommand ("116"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-01-30T23:54:45.8475030+11:00 0HLB7S2DKASMJ:00000003 [INF] Executed DbCommand ("3"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-01-30T23:54:45.9335605+11:00 0HLB7S2DKASMJ:00000003 [INF] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-01-30T23:54:45.9642490+11:00 0HLB7S2DKASMJ:00000003 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2018-01-30T23:54:45.9714676+11:00 0HLB7S2DKASMJ:00000003 [INF] User logged in. (fdce0db4)
+2018-01-30T23:54:45.9824246+11:00 0HLB7S2DKASMJ:00000003 [INF] Executing RedirectResult, redirecting to "/Home/Dashboard". (d98d540e)
+2018-01-30T23:54:45.9889025+11:00 0HLB7S2DKASMJ:00000003 [INF] Executed action "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" in 3283.883ms (afa2e885)
+2018-01-30T23:54:45.9990971+11:00 0HLB7S2DKASMJ:00000003 [INF] Request finished in 3320.1951ms 302  (791a596a)
+2018-01-30T23:54:46.0094386+11:00 0HLB7S2DKASMJ:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Home/Dashboard   (ca22a1cb)
+2018-01-30T23:54:46.0369989+11:00 0HLB7S2DKASMJ:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-30T23:54:46.0463232+11:00 0HLB7S2DKASMJ:00000004 [INF] Executing action method "DOMS.WebApp.Controllers.HomeController.Dashboard (DOMS.WebApp)" with arguments ([""]) - ModelState is Valid (ba7f4ac2)
+2018-01-30T23:54:46.2932296+11:00 0HLB7S2DKASMJ:00000004 [INF] Executing ViewResult, running view at path "/Views/Home/Dashboard.cshtml". (9707eebe)
+2018-01-30T23:54:47.0831209+11:00 0HLB7S2DKASMJ:00000004 [INF] Executed action "DOMS.WebApp.Controllers.HomeController.Dashboard (DOMS.WebApp)" in 1033.4309ms (afa2e885)
+2018-01-30T23:54:47.0922535+11:00 0HLB7S2DKASMJ:00000004 [INF] Request finished in 1081.2433ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-30T23:54:49.4224912+11:00 0HLB7S2DKASMJ:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Admin/Brands   (ca22a1cb)
+2018-01-30T23:54:49.4324364+11:00 0HLB7S2DKASMJ:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-30T23:54:49.4462600+11:00 0HLB7S2DKASMJ:00000005 [INF] Executing action method "DOMS.WebApp.Controllers.AdminController.Brands (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-30T23:54:49.4622944+11:00 0HLB7S2DKASMJ:00000005 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-30T23:54:49.5205965+11:00 0HLB7S2DKASMJ:00000005 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[BrandId], [x].[BrandDescription], [x].[BrandLogo], [x].[BrandName], [x].[CountryId], [x].[CreatedTime], [x].[Deleted], [x].[DeletedTime], [x].[UpdatedTime]
+FROM [DOMS_Brand] AS [x]
+WHERE [x].[Deleted] = 0" (0723d8ff)
+2018-01-30T23:54:49.8699598+11:00 0HLB7S2DKASMJ:00000005 [INF] Executing ViewResult, running view at path "/Views/Admin/Brands.cshtml". (9707eebe)
+2018-01-30T23:54:49.9265214+11:00 0HLB7S2DKASMJ:00000005 [INF] Executed action "DOMS.WebApp.Controllers.AdminController.Brands (DOMS.WebApp)" in 484.4201ms (afa2e885)
+2018-01-30T23:54:49.9399128+11:00 0HLB7S2DKASMJ:00000005 [INF] Request finished in 516.5679ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-30T23:54:51.4645597+11:00 0HLB7S2DKASMJ:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Admin/Catalogues   (ca22a1cb)
+2018-01-30T23:54:51.4758976+11:00 0HLB7S2DKASMJ:00000006 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-30T23:54:51.4918309+11:00 0HLB7S2DKASMJ:00000006 [INF] Executing action method "DOMS.WebApp.Controllers.AdminController.Catalogues (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-30T23:54:51.5068148+11:00 0HLB7S2DKASMJ:00000006 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-30T23:54:51.5323914+11:00 0HLB7S2DKASMJ:00000006 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [d].[CatalogueId], [d].[FamilyId], [d].[Memo], [d].[Name]
+FROM [DOMS_Catalogue] AS [d]" (0723d8ff)
+2018-01-30T23:54:51.7303343+11:00 0HLB7S2DKASMJ:00000006 [INF] Executing ViewResult, running view at path "/Views/Admin/Catalogues.cshtml". (9707eebe)
+2018-01-30T23:54:51.7539993+11:00 0HLB7S2DKASMJ:00000006 [INF] Executed action "DOMS.WebApp.Controllers.AdminController.Catalogues (DOMS.WebApp)" in 264.5778ms (afa2e885)
+2018-01-30T23:54:51.7777911+11:00 0HLB7S2DKASMJ:00000006 [INF] Request finished in 300.572ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-30T23:54:56.2906707+11:00 0HLB7S2DKASMJ:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Admin/CreateCatalogue   (ca22a1cb)
+2018-01-30T23:54:56.3050233+11:00 0HLB7S2DKASMJ:00000007 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-30T23:54:56.3188055+11:00 0HLB7S2DKASMJ:00000007 [INF] Executing action method "DOMS.WebApp.Controllers.AdminController.CreateCatalogue (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-30T23:54:56.4544375+11:00 0HLB7S2DKASMJ:00000007 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-30T23:54:56.4868215+11:00 0HLB7S2DKASMJ:00000007 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [d].[FamilyId], [d].[Memo], [d].[Name]
+FROM [DOMS_Family] AS [d]" (0723d8ff)
+2018-01-30T23:54:57.0034012+11:00 0HLB7S2DKASMJ:00000007 [INF] Executing ViewResult, running view at path "/Views/Admin/CreateCatalogue.cshtml". (9707eebe)
+2018-01-30T23:54:57.0926157+11:00 0HLB7S2DKASMJ:00000007 [INF] Executed action "DOMS.WebApp.Controllers.AdminController.CreateCatalogue (DOMS.WebApp)" in 775.4707ms (afa2e885)
+2018-01-30T23:54:57.1167785+11:00 0HLB7S2DKASMJ:00000007 [INF] Request finished in 820.8317ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-30T23:56:01.4007363+11:00 0HLB7S2DKASML:00000001 [INF] Request starting HTTP/1.1 POST http://localhost:44388/Admin/CreateCatalogue application/x-www-form-urlencoded 263 (ca22a1cb)
+2018-01-30T23:56:01.4115649+11:00 0HLB7S2DKASML:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-30T23:56:01.4480481+11:00 0HLB7S2DKASML:00000001 [INF] Executing action method "DOMS.WebApp.Controllers.AdminController.CreateCatalogue (DOMS.WebApp)" with arguments (["DOMS.Model.DbModels.Catalogue"]) - ModelState is Valid (ba7f4ac2)
+2018-01-30T23:56:01.4668321+11:00 0HLB7S2DKASML:00000001 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-30T23:56:01.7493735+11:00 0HLB7S2DKASML:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=["@p0='?', @p1='?' (Size = 4000), @p2='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [DOMS_Catalogue] ([FamilyId], [Memo], [Name])
+VALUES (@p0, @p1, @p2);
+SELECT [CatalogueId]
+FROM [DOMS_Catalogue]
+WHERE @@ROWCOUNT = 1 AND [CatalogueId] = scope_identity();" (0723d8ff)
+2018-01-30T23:56:01.7845004+11:00 0HLB7S2DKASML:00000001 [INF] Executing RedirectResult, redirecting to "/Admin/Catalogues". (d98d540e)
+2018-01-30T23:56:01.7916668+11:00 0HLB7S2DKASML:00000001 [INF] Executed action "DOMS.WebApp.Controllers.AdminController.CreateCatalogue (DOMS.WebApp)" in 359.6705ms (afa2e885)
+2018-01-30T23:56:01.7987946+11:00 0HLB7S2DKASML:00000001 [INF] Request finished in 401.8086ms 302  (791a596a)
+2018-01-30T23:56:01.8096667+11:00 0HLB7S2DKASML:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Admin/Catalogues   (ca22a1cb)
+2018-01-30T23:56:01.8167098+11:00 0HLB7S2DKASML:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-30T23:56:01.8239746+11:00 0HLB7S2DKASML:00000002 [INF] Executing action method "DOMS.WebApp.Controllers.AdminController.Catalogues (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-30T23:56:01.8300467+11:00 0HLB7S2DKASML:00000002 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-30T23:56:01.8406392+11:00 0HLB7S2DKASML:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [d].[CatalogueId], [d].[FamilyId], [d].[Memo], [d].[Name]
+FROM [DOMS_Catalogue] AS [d]" (0723d8ff)
+2018-01-30T23:56:01.8483698+11:00 0HLB7S2DKASML:00000002 [INF] Executing ViewResult, running view at path "/Views/Admin/Catalogues.cshtml". (9707eebe)
+2018-01-30T23:56:01.8619074+11:00 0HLB7S2DKASML:00000002 [INF] Executed action "DOMS.WebApp.Controllers.AdminController.Catalogues (DOMS.WebApp)" in 37.9488ms (afa2e885)
+2018-01-30T23:56:01.8683157+11:00 0HLB7S2DKASML:00000002 [INF] Request finished in 59.8752ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-30T23:57:32.9948541+11:00 0HLB7S2DKASMM:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Admin/CreateCatalogue   (ca22a1cb)
+2018-01-30T23:57:33.0108726+11:00 0HLB7S2DKASMM:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-30T23:57:33.0274506+11:00 0HLB7S2DKASMM:00000001 [INF] Executing action method "DOMS.WebApp.Controllers.AdminController.CreateCatalogue (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-01-30T23:57:33.0418625+11:00 0HLB7S2DKASMM:00000001 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-01-30T23:57:33.0783532+11:00 0HLB7S2DKASMM:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [d].[FamilyId], [d].[Memo], [d].[Name]
+FROM [DOMS_Family] AS [d]" (0723d8ff)
+2018-01-30T23:57:33.0951307+11:00 0HLB7S2DKASMM:00000001 [INF] Executing ViewResult, running view at path "/Views/Admin/CreateCatalogue.cshtml". (9707eebe)
+2018-01-30T23:57:33.1224659+11:00 0HLB7S2DKASMM:00000001 [INF] Executed action "DOMS.WebApp.Controllers.AdminController.CreateCatalogue (DOMS.WebApp)" in 95.6291ms (afa2e885)
+2018-01-30T23:57:33.1381696+11:00 0HLB7S2DKASMM:00000001 [INF] Request finished in 144.6986ms 200 text/html; charset=utf-8 (791a596a)
+2018-01-30T23:57:41.9737432+11:00 0HLB7S2DKASMM:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:44388/Admin/CreateCatalogue application/x-www-form-urlencoded 258 (ca22a1cb)
+2018-01-30T23:57:41.9919006+11:00 0HLB7S2DKASMM:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-01-30T23:57:42.0114510+11:00 0HLB7S2DKASMM:00000002 [INF] Executing action method "DOMS.WebApp.Controllers.AdminController.CreateCatalogue (DOMS.WebApp)" with arguments (["DOMS.Model.DbModels.Catalogue"]) - ModelState is Valid (ba7f4ac2)

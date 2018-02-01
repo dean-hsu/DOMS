@@ -5,6 +5,10 @@
     <UserSecretsId>aspnet-DOMS.WebApp-6796E6DD-F97E-4802-8C5D-DCC4F442CDD8</UserSecretsId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Properties\PublishProfiles\Test.pubxml" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
@@ -29,6 +33,7 @@
 
   <ItemGroup>
     <Folder Include="..\..\..\..\Dean%2527s\Practices\DOMS\DOMS.WebApp\wwwroot\css\patterns\" />
+    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
 
 </Project>
