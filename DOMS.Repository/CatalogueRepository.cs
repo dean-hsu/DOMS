@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using Microsoft.EntityFrameworkCore;
 using DOMS.Interface.Repository;
 using DOMS.Model.DbModels;
 using DOMS.Repository.DbContext;
@@ -16,7 +16,7 @@ namespace DOMS.Repository
 
         public IList<Catalogue> GetCatalogues()
         {
-            return _db.Catalogues.ToList();
+            return _db.Catalogues.Include(x=>x.Family).OrderBy(x=>x.FamilyId).ToList();
         }
 
         public bool CreateCatalogue(Catalogue catalogue)

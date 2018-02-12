@@ -16,7 +16,7 @@ namespace DOMS.Repository
 
         public IList<Order> GetOrders(string userName)
         {
-            return _db.Orders.Where(x => x.User.UserName == userName).ToList();
+            return _db.Orders.Where(x => x.UserName == userName).ToList();
         }
     }
 }

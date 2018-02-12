@@ -36,7 +36,7 @@ namespace DOMS.Model.DbModels
         [Key]
         public string OrderNo { get; set; }
         [Required]
-        public Product Product { get; set; }
+        public int ProductId { get; set; }
         [Required]
         public int Quantity { get; set; }
         public decimal SellPriceAud { get; set; }
@@ -48,10 +48,15 @@ namespace DOMS.Model.DbModels
         public PaymentStatus PaymentStatus { get; set; }
         public PaymentMethod? PaymentMethod { get; set; }
         [Required]
-        public Customer Customer { get; set; }
-        public Delivery Delivery{ get; set; }
+        public int CustomerId { get; set; }
+        public int DeliveryId{ get; set; }
         public string Memo { get; set; }
         [Required]
+        public string UserName { get; set; }
+
+        public Product Product { get; set; }
+        public Customer Customer { get; set; }
+        public Delivery Delivery { get; set; }
         public ApplicationUser User { get; set; }
     }
 }

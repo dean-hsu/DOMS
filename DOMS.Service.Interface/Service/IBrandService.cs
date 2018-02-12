@@ -9,5 +9,7 @@ namespace DOMS.Interface.Service
     {
         IList<Brand> GetBrands();
         bool AddBrand(Brand brand);
+        Brand GetBrand(int brandId);
+        bool UpdateBrand(Brand brand);
     }
 }

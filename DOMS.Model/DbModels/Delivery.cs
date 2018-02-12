@@ -12,8 +12,9 @@ namespace DOMS.Model.DbModels
         [Key]
         public int DeliveryId { get; set; }
         [Required]
-        public Courier Courier { get; set; }
+        public int CourierId { get; set; }
         [Required]
         public string TrackNumber { get; set; }
+        public Courier Courier { get; set; }
     }
 }

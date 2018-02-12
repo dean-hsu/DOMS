@@ -17,9 +17,11 @@ namespace DOMS.Model.DbModels
         public string BrandLogo { get; set; }
 
         [Display(Name = "Country")]
-        public Country Country { get; set; }
+        public int CountryId { get; set; }
 
         [Display(Name = "Description")]
         public string BrandDescription { get; set; }
+
+        public Country Country { get; set; }
     }
 }

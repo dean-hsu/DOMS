@@ -34,6 +34,7 @@
   <ItemGroup>
     <Folder Include="..\..\..\..\Dean%2527s\Practices\DOMS\DOMS.WebApp\wwwroot\css\patterns\" />
     <Folder Include="Properties\PublishProfiles\" />
+    <Folder Include="wwwroot\images\upload\logo\" />
   </ItemGroup>
 
 </Project>

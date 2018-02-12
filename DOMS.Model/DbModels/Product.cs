@@ -10,7 +10,7 @@ namespace DOMS.Model.DbModels
         public int ProductId { get; set; }
         [Required]
         public string ProductName { get; set; }
-        public Brand Brand { get; set; }
+        public int BrandId { get; set; }
         public string Description { get; set; }
         [Required]
         public decimal CurrentCostAud { get; set; }
@@ -18,10 +18,14 @@ namespace DOMS.Model.DbModels
         public decimal CurrentSellPriceAud { get; set; }
         [Required]
         public decimal CurrentSellPriceRmb { get; set; }
-        public Catalogue Catalogue { get; set; }
+        public int CatalogueId { get; set; }
         public string Labels { get; set; }
         [Required]
-        public ApplicationUser CreatedUser { get; set; }
+        public string CreatedUserName { get; set; }
         public bool IsPublic { get; set; }
+
+        public Brand Brand { get; set; }
+        public Catalogue Catalogue { get; set; }
+        public ApplicationUser CreatedUser { get; set; }
     }
 }

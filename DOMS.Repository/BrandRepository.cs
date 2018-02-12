@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using DOMS.Interface.Repository;
 using DOMS.Model.DbModels;
 using DOMS.Repository.DbContext;
@@ -24,12 +25,20 @@ namespace DOMS.Repository
 
         public IList<Brand> GetBrands()
         {
-            return _db.Brands.Where(x => !x.Deleted).ToList();
+            return _db.Brands.Include(x=>x.Country).Where(x => !x.Deleted).ToList();
         }
 
         public bool UpdateBrand(Brand brand)
         {
-            throw new NotImplementedException();
+            ChangeUpdateTime(brand);
+            _db.Brands.Update(brand);
+            _db.SaveChanges();
+            return true;
+        }
+
+        public Brand GetBrand(int brandId)
+        {
+            return _db.Brands.FirstOrDefault(x => x.BrandId == brandId);
         }
     }
 }

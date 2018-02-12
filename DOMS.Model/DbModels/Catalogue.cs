@@ -11,9 +11,10 @@ namespace DOMS.Model.DbModels
     {
         [Key]
         public int CatalogueId { get; set; }
-        public Family Family { get; set; }
+        public int FamilyId { get; set; }
         [Required]
         public string Name { get; set; }
         public string Memo { get; set; }
+        public Family Family { get; set; }
     }
 }

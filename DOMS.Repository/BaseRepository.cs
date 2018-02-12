@@ -19,7 +19,7 @@ namespace DOMS.Repository
             entity.UpdatedTime = DateTime.Now;
         }
 
-        protected void AddUpdateTime(BaseModel entity)
+        protected void ChangeUpdateTime(BaseModel entity)
         {
             entity.UpdatedTime = DateTime.Now;
         }

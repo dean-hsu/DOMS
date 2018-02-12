@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using DOMS.Interface.Service;
 using DOMS.Model.DbModels;
+using DOMS.WebApp.Helper;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -16,14 +19,18 @@ namespace DOMS.WebApp.Controllers
         private readonly ICountryService _countryService;
         private readonly IFamilyService _familyService;
         private readonly ICatalogueService _catalogueService;
+        private readonly IHostingEnvironment _appEnvironment;
 
-        public AdminController(ILogger<AdminController> logger, IBrandService brandService, ICountryService countryService, IFamilyService familyService, ICatalogueService catalogueService)
+        public AdminController(ILogger<AdminController> logger, IBrandService brandService,
+            ICountryService countryService, IFamilyService familyService, ICatalogueService catalogueService,
+            IHostingEnvironment appEnvironment)
         {
             _logger = logger;
             _brandService = brandService;
             _countryService = countryService;
             _familyService = familyService;
             _catalogueService = catalogueService;
+            _appEnvironment = appEnvironment;
         }
 
         public IActionResult Brands()
@@ -38,7 +45,7 @@ namespace DOMS.WebApp.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddBrand(Brand brand)
+        public async Task<IActionResult> AddBrand(Brand brand)
         {
             ViewBag.CountryList = _countryService.GetCountries().OrderBy(x => x.CountryName);
             if (!ModelState.IsValid)
@@ -46,8 +53,58 @@ namespace DOMS.WebApp.Controllers
                 return View();
             }
 
+            var files = HttpContext.Request.Form.Files;
+            var imgFolder = Path.Combine(_appEnvironment.WebRootPath, "images\\upload\\logo");
+            foreach (var image in files)
+            {
+                try
+                {
+                    brand.BrandLogo = await ImageUploader.UploadImage(image, imgFolder).ConfigureAwait(false);
+                }
+                catch (Exception ex)
+                {
+                    ModelState.AddModelError("BrandLogo", ex.Message);
+                    return View();
+                }
+            }
+
             _brandService.AddBrand(brand);
             
+            return RedirectToAction("Brands");
+        }
+
+        public IActionResult EditBrand(int id)
+        {
+            ViewBag.CountryList = _countryService.GetCountries().OrderBy(x => x.CountryName);
+            return View(_brandService.GetBrand(id));
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditBrand(Brand brand)
+        {
+            ViewBag.CountryList = _countryService.GetCountries().OrderBy(x => x.CountryName);
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
+            var files = HttpContext.Request.Form.Files;
+            var imgFolder = Path.Combine(_appEnvironment.WebRootPath, "images\\upload\\logo");
+            foreach (var image in files)
+            {
+                try
+                {
+                    brand.BrandLogo = await ImageUploader.UploadImage(image, imgFolder).ConfigureAwait(false);
+                }
+                catch (Exception ex)
+                {
+                    ModelState.AddModelError("BrandLogo", ex.Message);
+                    return View();
+                }
+            }
+
+            _brandService.UpdateBrand(brand);
+
             return RedirectToAction("Brands");
         }
 

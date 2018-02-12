@@ -28,5 +28,15 @@ namespace DOMS.Service
         {
             return _brandRepository.CreateBrand(brand);
         }
+
+        public Brand GetBrand(int brandId)
+        {
+            return _brandRepository.GetBrand(brandId);
+        }
+
+        public bool UpdateBrand(Brand brand)
+        {
+            return _brandRepository.UpdateBrand(brand);
+        }
     }
 }

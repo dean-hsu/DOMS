@@ -10,5 +10,6 @@ namespace DOMS.Interface.Repository
         IList<Brand> GetBrands();
         bool CreateBrand(Brand brand);
         bool UpdateBrand(Brand brand);
+        Brand GetBrand(int brandId);
     }
 }
