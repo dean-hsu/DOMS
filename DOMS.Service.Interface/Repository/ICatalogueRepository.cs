@@ -8,6 +8,7 @@ namespace DOMS.Interface.Repository
     public interface ICatalogueRepository
     {
         IList<Catalogue> GetCatalogues();
+        IList<Catalogue> GetCatalogues(int familyId);
         bool CreateCatalogue(Catalogue catalogue);
         bool UpdateCatalogue(Catalogue catalogue);
     }

@@ -45,6 +45,7 @@ namespace DOMS.WebApp.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddBrand(Brand brand)
         {
             ViewBag.CountryList = _countryService.GetCountries().OrderBy(x => x.CountryName);
@@ -80,6 +81,7 @@ namespace DOMS.WebApp.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> EditBrand(Brand brand)
         {
             ViewBag.CountryList = _countryService.GetCountries().OrderBy(x => x.CountryName);
@@ -119,6 +121,7 @@ namespace DOMS.WebApp.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult CreateFamily(Family family)
         {
             if (!ModelState.IsValid)
@@ -143,6 +146,7 @@ namespace DOMS.WebApp.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult CreateCatalogue(Catalogue catalogue)
         {
             if (!ModelState.IsValid)

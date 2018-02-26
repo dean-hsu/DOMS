@@ -8,5 +8,6 @@ namespace DOMS.Interface.Repository
     public interface IProductRepository
     {
         IList<Product> GetProducts(string userName);
+        bool CreateProduct(Product product);
     }
 }

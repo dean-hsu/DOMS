@@ -8,5 +8,6 @@ namespace DOMS.Interface.Service
     public interface IProductService
     {
         IList<Product> GetProducts(string userName);
+        bool CreateProduct(Product product);
     }
 }

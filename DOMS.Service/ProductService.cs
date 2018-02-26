@@ -23,5 +23,10 @@ namespace DOMS.Service
         {
             return _productRepository.GetProducts(userName);
         }
+
+        public bool CreateProduct(Product product)
+        {
+            return _productRepository.CreateProduct(product);
+        }
     }
 }

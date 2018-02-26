@@ -16,7 +16,15 @@ namespace DOMS.Repository
 
         public IList<Product> GetProducts(string userName)
         {
-            return _db.Products.Where(x => x.CreatedUser.UserName == userName).ToList();
+            return _db.Products.Where(x => x.CreatedUserName == userName).ToList();
+        }
+
+        public bool CreateProduct(Product product)
+        {
+            AddCreateTime(product);
+            _db.Products.Add(product);
+            _db.SaveChanges();
+            return true;
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using DOMS.Interface.Service;
+using DOMS.Model.DbModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -18,6 +19,37 @@ namespace DOMS.WebApp.Controllers
         public IActionResult Index()
         {
             return View(_orderService.GetOrders(User.Identity.Name));
+        }
+
+        public IActionResult Create()
+        {
+
+            var order = new Order
+            {
+                UserName = User.Identity.Name,
+                Status = OrderStatus.Ready,
+                PaymentStatus = PaymentStatus.Unpaid
+            };
+            return View(order);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Order entity)
+        {
+            try
+            {
+                return View();
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        private void InitializeOrder()
+        {
+
         }
     }
 }

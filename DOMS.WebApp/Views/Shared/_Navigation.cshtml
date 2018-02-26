@@ -43,6 +43,13 @@
                     <li class="@Html.IsSelected(action: "Create")"><a href="@Url.Action("Create", "Product")">New Product</a></li>
                 </ul>
             </li>
+            <li class="@Html.IsSelected(controller: "Customer")">
+                <a href="@Url.Action("Index", "Customer")"><i class="fa fa-diamond"></i> <span class="nav-label" data-i18n="nav.projects">Customers</span> <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse @Html.IsSelected(controller: "Customer", cssClass: "in")">
+                    <li class="@Html.IsSelected(action: "Index")"><a href="@Url.Action("Index", "Customer")">Customers</a></li>
+                    <li class="@Html.IsSelected(action: "Create")"><a href="@Url.Action("Create", "Customer")">New Customer</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
 </nav>

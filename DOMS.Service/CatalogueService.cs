@@ -24,6 +24,11 @@ namespace DOMS.Service
             return _catalogueRepository.GetCatalogues();
         }
 
+        public IList<Catalogue> GetCatalogues(int familyId)
+        {
+            return _catalogueRepository.GetCatalogues(familyId);
+        }
+
         public bool AddCatalogue(Catalogue catalogue)
         {
             return _catalogueRepository.CreateCatalogue(catalogue);

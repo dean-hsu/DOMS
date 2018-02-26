@@ -1,0 +1,83 @@
+﻿@model DOMS.Model.DbModels.Product
+
+@{
+    ViewData["Title"] = "Create New Product";
+}
+
+<h2>Create New Product</h2>
+
+<h4>New Product</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ProductName" class="control-label"></label>
+                <input asp-for="ProductName" class="form-control" />
+                <span asp-validation-for="ProductName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BrandId" class="control-label"></label>
+                <select asp-for="BrandId" class="form-control" asp-items="@(new SelectList(ViewBag.BrandList, "BrandId","BrandName"))"></select>
+                <span asp-validation-for="BrandId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label  class="control-label">Family</label>
+                <select id="familyId"  class="form-control" asp-items="@(new SelectList(ViewBag.FamilyList, "FamilyId","Name"))"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="CatalogueId" class="control-label"></label>
+                <select asp-for="CatalogueId" class="form-control" asp-items="@(new SelectList(ViewBag.CatalogueList, "CatalogueId","Name"))"></select>
+                <span asp-validation-for="CatalogueId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CurrentCostAud" class="control-label"></label>
+                <input asp-for="CurrentCostAud" class="form-control" />
+                <span asp-validation-for="CurrentCostAud" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CurrentCostRmb" class="control-label"></label>
+                <input asp-for="CurrentCostRmb" class="form-control" />
+                <span asp-validation-for="CurrentCostRmb" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CurrentSellPriceAud" class="control-label"></label>
+                <input asp-for="CurrentSellPriceAud" class="form-control" />
+                <span asp-validation-for="CurrentSellPriceAud" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CurrentSellPriceRmb" class="control-label"></label>
+                <input asp-for="CurrentSellPriceRmb" class="form-control" />
+                <span asp-validation-for="CurrentSellPriceRmb" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IsPublic" class="control-label"></label>
+                <input asp-for="IsPublic" class="form-control" />
+                <span asp-validation-for="IsPublic" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Labels" class="control-label"></label>
+                <input asp-for="Labels" class="form-control" />
+                <span asp-validation-for="Labels" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create Product" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to Product List</a>
+</div>
+
+@section Scripts{ 
+    <script type="text/javascript" src="~/js/product.js"></script>
+}
+

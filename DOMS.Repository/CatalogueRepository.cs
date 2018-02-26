@@ -19,6 +19,11 @@ namespace DOMS.Repository
             return _db.Catalogues.Include(x=>x.Family).OrderBy(x=>x.FamilyId).ToList();
         }
 
+        public IList<Catalogue> GetCatalogues(int familyId)
+        {
+            return _db.Catalogues.Include(x => x.Family).Where(x => x.FamilyId == familyId).OrderBy(x => x.FamilyId).ToList();
+        }
+
         public bool CreateCatalogue(Catalogue catalogue)
         {
             _db.Catalogues.Add(catalogue);

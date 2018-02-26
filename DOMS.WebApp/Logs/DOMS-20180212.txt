@@ -1,0 +1,120 @@
+2018-02-12T23:24:39.6327594+11:00 0HLBI2EB50HP8:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44388/   (ca22a1cb)
+2018-02-12T23:24:39.9360319+11:00 0HLBI2EB50HP8:00000001 [INF] Executing action method "DOMS.WebApp.Controllers.HomeController.Index (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-02-12T23:24:39.9740590+11:00 0HLBI2EB50HP8:00000001 [INF] Executing RedirectResult, redirecting to "/Account/Login". (d98d540e)
+2018-02-12T23:24:40.0058086+11:00 0HLBI2EB50HP8:00000001 [INF] Executed action "DOMS.WebApp.Controllers.HomeController.Index (DOMS.WebApp)" in 77.2721ms (afa2e885)
+2018-02-12T23:24:40.0270593+11:00 0HLBI2EB50HP8:00000001 [INF] Request finished in 430.3857ms 302  (791a596a)
+2018-02-12T23:24:40.0648186+11:00 0HLBI2EB50HP8:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Account/Login   (ca22a1cb)
+2018-02-12T23:24:40.3001424+11:00 0HLBI2EB50HP8:00000002 [INF] Executing action method "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" with arguments ([""]) - ModelState is Valid (ba7f4ac2)
+2018-02-12T23:24:40.3315787+11:00 0HLBI2EB50HP8:00000002 [INF] AuthenticationScheme: "Identity.External" signed out. (d3f50c8d)
+2018-02-12T23:24:44.9394338+11:00 0HLBI2EB50HP8:00000002 [INF] Executing ViewResult, running view at path "/Views/Account/Login.cshtml". (9707eebe)
+2018-02-12T23:24:45.1312669+11:00 0HLBI2EB50HP8:00000002 [INF] Executed action "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" in 5008.4211ms (afa2e885)
+2018-02-12T23:24:45.1734512+11:00 0HLBI2EB50HP8:00000002 [INF] Request finished in 5094.9642ms 200 text/html; charset=utf-8 (791a596a)
+2018-02-12T23:24:45.2720049+11:00 0HLBI2EB50HPA:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44388/lib/bootstrap/dist/css/bootstrap.css   (ca22a1cb)
+2018-02-12T23:24:45.2732312+11:00 0HLBI2EB50HP9:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44388/css/site.css   (ca22a1cb)
+2018-02-12T23:24:45.2778119+11:00 0HLBI2EB50HP8:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44388/css/style.css   (ca22a1cb)
+2018-02-12T23:24:45.3299910+11:00 0HLBI2EB50HP8:00000003 [INF] The file "/css/style.css" was not modified (f1f8d725)
+2018-02-12T23:24:45.3538436+11:00 0HLBI2EB50HP9:00000001 [INF] The file "/css/site.css" was not modified (f1f8d725)
+2018-02-12T23:24:45.3558395+11:00 0HLBI2EB50HPA:00000001 [INF] The file "/lib/bootstrap/dist/css/bootstrap.css" was not modified (f1f8d725)
+2018-02-12T23:24:45.4324582+11:00 0HLBI2EB50HPA:00000001 [INF] Request finished in 146.0413ms 304 text/css (791a596a)
+2018-02-12T23:24:45.4560082+11:00 0HLBI2EB50HP9:00000001 [INF] Request finished in 185.3852ms 304 text/css (791a596a)
+2018-02-12T23:24:45.5037819+11:00 0HLBI2EB50HP8:00000003 [INF] Request finished in 142.0935ms 304 text/css (791a596a)
+2018-02-12T23:24:45.9777078+11:00 0HLBI2EB50HPA:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44388/favicon.ico   (ca22a1cb)
+2018-02-12T23:24:45.9839762+11:00 0HLBI2EB50HPA:00000002 [INF] The file "/favicon.ico" was not modified (f1f8d725)
+2018-02-12T23:24:45.9956349+11:00 0HLBI2EB50HPA:00000002 [INF] Request finished in 14.7271ms 304 image/x-icon (791a596a)
+2018-02-12T23:24:51.6140279+11:00 0HLBI2EB50HP8:00000004 [INF] Request starting HTTP/1.1 POST http://localhost:44388/Account/Login application/x-www-form-urlencoded 246 (ca22a1cb)
+2018-02-12T23:24:51.7203174+11:00 0HLBI2EB50HP8:00000004 [INF] Executing action method "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" with arguments (["DOMS.Model.ViewModels.AccountViewModels.LoginViewModel", ""]) - ModelState is Valid (ba7f4ac2)
+2018-02-12T23:24:52.0661100+11:00 0HLBI2EB50HP8:00000004 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-02-12T23:24:52.6774717+11:00 0HLBI2EB50HP8:00000004 [INF] Executed DbCommand ("123"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-02-12T23:24:52.8915720+11:00 0HLBI2EB50HP8:00000004 [INF] Executed DbCommand ("6"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-02-12T23:24:52.9560908+11:00 0HLBI2EB50HP8:00000004 [INF] Executed DbCommand ("4"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-02-12T23:24:52.9667286+11:00 0HLBI2EB50HP8:00000004 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2018-02-12T23:24:52.9729351+11:00 0HLBI2EB50HP8:00000004 [INF] User logged in. (fdce0db4)
+2018-02-12T23:24:52.9822072+11:00 0HLBI2EB50HP8:00000004 [INF] Executing RedirectResult, redirecting to "/Home/Dashboard". (d98d540e)
+2018-02-12T23:24:52.9877044+11:00 0HLBI2EB50HP8:00000004 [INF] Executed action "DOMS.WebApp.Controllers.AccountController.Login (DOMS.WebApp)" in 1348.2396ms (afa2e885)
+2018-02-12T23:24:53.0166913+11:00 0HLBI2EB50HP8:00000004 [INF] Request finished in 1390.0945ms 302  (791a596a)
+2018-02-12T23:24:53.0435777+11:00 0HLBI2EB50HP9:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Home/Dashboard   (ca22a1cb)
+2018-02-12T23:24:53.0536909+11:00 0HLBI2EB50HP9:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-02-12T23:24:53.0610936+11:00 0HLBI2EB50HP9:00000002 [INF] Executing action method "DOMS.WebApp.Controllers.HomeController.Dashboard (DOMS.WebApp)" with arguments ([""]) - ModelState is Valid (ba7f4ac2)
+2018-02-12T23:24:53.2920698+11:00 0HLBI2EB50HP9:00000002 [INF] Executing ViewResult, running view at path "/Views/Home/Dashboard.cshtml". (9707eebe)
+2018-02-12T23:24:53.8701474+11:00 0HLBI2EB50HP9:00000002 [INF] Executed action "DOMS.WebApp.Controllers.HomeController.Dashboard (DOMS.WebApp)" in 808.3024ms (afa2e885)
+2018-02-12T23:24:53.8769685+11:00 0HLBI2EB50HP9:00000002 [INF] Request finished in 876.4226ms 200 text/html; charset=utf-8 (791a596a)
+2018-02-12T23:24:53.9194792+11:00 0HLBI2EB50HPA:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44388/lib/jquery/dist/jquery.js   (ca22a1cb)
+2018-02-12T23:24:53.9456667+11:00 0HLBI2EB50HP9:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44388/js/site.js?v=7mkNbU1tgQL1bUeZe3j2R151hKLhLDKO4BBaR-iqCy0   (ca22a1cb)
+2018-02-12T23:24:53.9759411+11:00 0HLBI2EB50HPA:00000003 [INF] The file "/lib/jquery/dist/jquery.js" was not modified (f1f8d725)
+2018-02-12T23:24:54.0481683+11:00 0HLBI2EB50HPA:00000003 [INF] Request finished in 91.9024ms 304 application/javascript (791a596a)
+2018-02-12T23:24:54.0519956+11:00 0HLBI2EB50HP8:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44388/lib/bootstrap/dist/js/bootstrap.js   (ca22a1cb)
+2018-02-12T23:24:54.0629760+11:00 0HLBI2EB50HP8:00000005 [INF] The file "/lib/bootstrap/dist/js/bootstrap.js" was not modified (f1f8d725)
+2018-02-12T23:24:54.0754161+11:00 0HLBI2EB50HP9:00000003 [INF] The file "/js/site.js" was not modified (f1f8d725)
+2018-02-12T23:24:54.1076378+11:00 0HLBI2EB50HP8:00000005 [INF] Request finished in 178.9662ms 304 application/javascript (791a596a)
+2018-02-12T23:24:54.1090975+11:00 0HLBI2EB50HP9:00000003 [INF] Request finished in 191.7157ms 304 application/javascript (791a596a)
+2018-02-12T23:24:56.0890762+11:00 0HLBI2EB50HPA:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Admin/Brands   (ca22a1cb)
+2018-02-12T23:24:56.1059180+11:00 0HLBI2EB50HPA:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-02-12T23:24:56.1377787+11:00 0HLBI2EB50HPA:00000004 [INF] Executing action method "DOMS.WebApp.Controllers.AdminController.Brands (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-02-12T23:24:56.1642538+11:00 0HLBI2EB50HPA:00000004 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-02-12T23:24:56.2808440+11:00 0HLBI2EB50HPA:00000004 [INF] Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[BrandId], [x].[BrandDescription], [x].[BrandLogo], [x].[BrandName], [x].[CountryId], [x].[CreatedTime], [x].[Deleted], [x].[DeletedTime], [x].[UpdatedTime], [x.Country].[CountryId], [x.Country].[CountryCode], [x.Country].[CountryName]
+FROM [DOMS_Brand] AS [x]
+INNER JOIN [DOMS_Country] AS [x.Country] ON [x].[CountryId] = [x.Country].[CountryId]
+WHERE [x].[Deleted] = 0" (0723d8ff)
+2018-02-12T23:24:56.7171162+11:00 0HLBI2EB50HPA:00000004 [INF] Executing ViewResult, running view at path "/Views/Admin/Brands.cshtml". (9707eebe)
+2018-02-12T23:24:56.7788324+11:00 0HLBI2EB50HPA:00000004 [INF] Executed action "DOMS.WebApp.Controllers.AdminController.Brands (DOMS.WebApp)" in 659.3297ms (afa2e885)
+2018-02-12T23:24:56.7848906+11:00 0HLBI2EB50HPA:00000004 [INF] Request finished in 705.7135ms 200 text/html; charset=utf-8 (791a596a)
+2018-02-12T23:24:56.8774675+11:00 0HLBI2EB50HP9:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44388/images/upload/logo/24b301e3de5743dca1de3f161d087f56.png   (ca22a1cb)
+2018-02-12T23:24:56.8797189+11:00 0HLBI2EB50HPA:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44388/images/upload/logo/1fe3bebaa4f2495d9fa4f8e21ce0115d.jpg   (ca22a1cb)
+2018-02-12T23:24:56.9137267+11:00 0HLBI2EB50HP9:00000004 [INF] The file "/images/upload/logo/24b301e3de5743dca1de3f161d087f56.png" was not modified (f1f8d725)
+2018-02-12T23:24:56.9376102+11:00 0HLBI2EB50HP8:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:44388/images/upload/logo/beb35124df364fdd92eecda63f667be3.png   (ca22a1cb)
+2018-02-12T23:24:57.0315109+11:00 0HLBI2EB50HPA:00000005 [INF] The file "/images/upload/logo/1fe3bebaa4f2495d9fa4f8e21ce0115d.jpg" was not modified (f1f8d725)
+2018-02-12T23:24:57.0540677+11:00 0HLBI2EB50HPB:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44388/images/upload/logo/c562c4a78a694c938d6c7f15091a9cd5.jpg   (ca22a1cb)
+2018-02-12T23:24:57.0788224+11:00 0HLBI2EB50HP8:00000006 [INF] The file "/images/upload/logo/beb35124df364fdd92eecda63f667be3.png" was not modified (f1f8d725)
+2018-02-12T23:24:57.1520459+11:00 0HLBI2EB50HPA:00000005 [INF] Request finished in 215.3961ms 304 image/jpeg (791a596a)
+2018-02-12T23:24:57.1748844+11:00 0HLBI2EB50HP8:00000006 [INF] Request finished in 290.1418ms 304 image/png (791a596a)
+2018-02-12T23:24:57.2196434+11:00 0HLBI2EB50HP9:00000004 [INF] Request finished in 101.109ms 304 image/png (791a596a)
+2018-02-12T23:24:57.2429884+11:00 0HLBI2EB50HPB:00000001 [INF] The file "/images/upload/logo/c562c4a78a694c938d6c7f15091a9cd5.jpg" was not modified (f1f8d725)
+2018-02-12T23:24:57.2509291+11:00 0HLBI2EB50HPB:00000001 [INF] Request finished in 421.2218ms 304 image/jpeg (791a596a)
+2018-02-12T23:24:59.3732632+11:00 0HLBI2EB50HP9:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Admin/Families   (ca22a1cb)
+2018-02-12T23:24:59.3786844+11:00 0HLBI2EB50HP9:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-02-12T23:24:59.3882092+11:00 0HLBI2EB50HP9:00000005 [INF] Executing action method "DOMS.WebApp.Controllers.AdminController.Families (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-02-12T23:24:59.3952425+11:00 0HLBI2EB50HP9:00000005 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-02-12T23:24:59.4213214+11:00 0HLBI2EB50HP9:00000005 [INF] Executed DbCommand ("14"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [d].[FamilyId], [d].[Memo], [d].[Name]
+FROM [DOMS_Family] AS [d]" (0723d8ff)
+2018-02-12T23:24:59.5892390+11:00 0HLBI2EB50HP9:00000005 [INF] Executing ViewResult, running view at path "/Views/Admin/Families.cshtml". (9707eebe)
+2018-02-12T23:24:59.6143981+11:00 0HLBI2EB50HP9:00000005 [INF] Executed action "DOMS.WebApp.Controllers.AdminController.Families (DOMS.WebApp)" in 227.4668ms (afa2e885)
+2018-02-12T23:24:59.6218446+11:00 0HLBI2EB50HP9:00000005 [INF] Request finished in 247.1433ms 200 text/html; charset=utf-8 (791a596a)
+2018-02-12T23:25:01.0565594+11:00 0HLBI2EB50HPA:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Admin/Catalogues   (ca22a1cb)
+2018-02-12T23:25:01.0663953+11:00 0HLBI2EB50HPA:00000006 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-02-12T23:25:01.0826003+11:00 0HLBI2EB50HPA:00000006 [INF] Executing action method "DOMS.WebApp.Controllers.AdminController.Catalogues (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-02-12T23:25:01.0964654+11:00 0HLBI2EB50HPA:00000006 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-02-12T23:25:01.1370656+11:00 0HLBI2EB50HPA:00000006 [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[CatalogueId], [x].[FamilyId], [x].[Memo], [x].[Name], [x.Family].[FamilyId], [x.Family].[Memo], [x.Family].[Name]
+FROM [DOMS_Catalogue] AS [x]
+INNER JOIN [DOMS_Family] AS [x.Family] ON [x].[FamilyId] = [x.Family].[FamilyId]
+ORDER BY [x].[FamilyId]" (0723d8ff)
+2018-02-12T23:25:01.3308178+11:00 0HLBI2EB50HPA:00000006 [INF] Executing ViewResult, running view at path "/Views/Admin/Catalogues.cshtml". (9707eebe)
+2018-02-12T23:25:01.3592453+11:00 0HLBI2EB50HPA:00000006 [INF] Executed action "DOMS.WebApp.Controllers.AdminController.Catalogues (DOMS.WebApp)" in 279.0101ms (afa2e885)
+2018-02-12T23:25:01.3665508+11:00 0HLBI2EB50HPA:00000006 [INF] Request finished in 314.2315ms 200 text/html; charset=utf-8 (791a596a)
+2018-02-12T23:25:02.9337603+11:00 0HLBI2EB50HP8:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Product   (ca22a1cb)
+2018-02-12T23:25:02.9413625+11:00 0HLBI2EB50HP8:00000007 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-02-12T23:25:02.9482468+11:00 0HLBI2EB50HP8:00000007 [INF] Executing action method "DOMS.WebApp.Controllers.ProductController.Index (DOMS.WebApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-02-12T23:25:02.9560616+11:00 0HLBI2EB50HP8:00000007 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-02-12T23:25:02.9924634+11:00 0HLBI2EB50HP8:00000007 [INF] Executed DbCommand ("5"ms) [Parameters=["@__userName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[ProductId], [x].[BrandId], [x].[CatalogueId], [x].[CreatedTime], [x].[CreatedUserId], [x].[CreatedUserName], [x].[CurrentCostAud], [x].[CurrentCostRmb], [x].[CurrentSellPriceAud], [x].[CurrentSellPriceRmb], [x].[Deleted], [x].[DeletedTime], [x].[Description], [x].[IsPublic], [x].[Labels], [x].[ProductName], [x].[UpdatedTime]
+FROM [DOMS_Product] AS [x]
+LEFT JOIN [AspNetUsers] AS [x.CreatedUser] ON [x].[CreatedUserId] = [x.CreatedUser].[Id]
+WHERE [x.CreatedUser].[UserName] = @__userName_0" (0723d8ff)
+2018-02-12T23:25:03.2150950+11:00 0HLBI2EB50HP8:00000007 [INF] Executing ViewResult, running view at path "/Views/Product/Index.cshtml". (9707eebe)
+2018-02-12T23:25:03.2572114+11:00 0HLBI2EB50HP8:00000007 [INF] Executed action "DOMS.WebApp.Controllers.ProductController.Index (DOMS.WebApp)" in 307.8303ms (afa2e885)
+2018-02-12T23:25:03.2663729+11:00 0HLBI2EB50HP8:00000007 [INF] Request finished in 331.9931ms 200 text/html; charset=utf-8 (791a596a)
+2018-02-12T23:25:08.2074861+11:00 0HLBI2EB50HPB:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44388/Product/Create   (ca22a1cb)
+2018-02-12T23:25:08.2131548+11:00 0HLBI2EB50HPB:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-02-12T23:25:08.2219861+11:00 0HLBI2EB50HPB:00000002 [INF] Request finished in 13.2464ms 404  (791a596a)
