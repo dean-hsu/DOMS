@@ -3,7 +3,7 @@ using Xunit;
 
 namespace DOMS.Test
 {
-    public class UnitTest1
+    public class UnitTestSample
     {
         [Fact]
         public void Test1()
